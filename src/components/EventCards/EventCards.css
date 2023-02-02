@@ -2,7 +2,6 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    background-color: white;
 }
 .cardimage{
     width: 100%;
@@ -20,6 +19,7 @@
     position: relative;
     box-shadow: 0px 13px 10px -7px rgba(0,0,0,0.1);
     float: left;
+    
 }
 .cardcontainer:hover{
     box-shadow: 0px 30px 18px -8px rgba(0,0,0,0.1);
@@ -28,4 +28,8 @@
 .cards{
 width: 100%;
 height: auto;
+}
+.EventCards{
+    display:grid;
+    grid-template-columns: repeat(3,auto);
 }

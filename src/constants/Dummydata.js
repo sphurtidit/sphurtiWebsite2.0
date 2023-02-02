@@ -5,37 +5,37 @@ export const events = [
     id: 1,
     title: "FOOTBALL",
     thumbnail: image1,
-    link: "",
+    link: "/Football",
   },
   {
     id: 2,
     title: "BASKETBALL",
     thumbnail: image1,
-    link: "",
+    link: "/Basketball",
   },
   {
     id: 3,
     title: "CRICKET",
     thumbnail: image1,
-    link: "",
+    link: "/Cricket",
   },
   {
     id: 4,
     title: "TABLETENNIS",
     thumbnail: image1,
-    link: "",
+    link: "/TableTennis",
   },
   {
     id: 5,
     title: "BADMINTON",
     thumbnail: image1,
-    link: "",
+    link: "/Badminton",
   },
   {
     id: 6,
     title: "VOLLEYBALL",
     thumbnail: image1,
-    link: "",
+    link: "/Volleyball",
   },
   
 ];

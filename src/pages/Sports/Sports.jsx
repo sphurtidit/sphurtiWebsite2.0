@@ -1,6 +1,6 @@
 import React from 'react'
 import './Sports.css';
-import Eventswrapper from '../../components/Navbar/EventCards/Eventwrapper';
+import Eventswrapper from '../../components/EventCards/Eventwrapper';
 
 function Sports() {
   return (
