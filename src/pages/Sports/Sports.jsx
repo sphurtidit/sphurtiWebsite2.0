@@ -1,10 +1,12 @@
 import React from 'react'
-import './Sports.css'
+import './Sports.css';
+import Eventswrapper from '../../components/EventCards/Eventwrapper';
 
 function Sports() {
   return (
     <div>
-      This is sports page
+      SPORTS.
+      <Eventswrapper/>
     </div>
   )
 }
