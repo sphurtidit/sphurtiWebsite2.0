@@ -9,26 +9,36 @@ import { Link, useLocation } from 'react-router-dom'
 
 function Navbar() {
 
-    const {pathname}=useLocation();
-    const [menuOpened,setMenuOpened]=useState(false);
+    const { pathname } = useLocation();
+    const [menuVisible, setMenuVisble] = useState("");
 
-    const showNavbar=()=>{
-        setMenuOpened(!menuOpened);
+    const showNavbar = () => {
+        setMenuVisble("visible");
+    }
+
+    const closeMenu=()=>{
+        setMenuVisble("");
     }
 
     return (
         <>
             <div className="navbar">
-                <ul>
-                    <img className="sphurtiLogo" src={sphurtiLogo} alt="" />
+                <div className={`logo${menuVisible}`}>
+                    <img src={sphurtiLogo} alt="" />
+                </div>
+                <div className={`listNavbar${menuVisible}`}>
                     <li className={`${pathname === "/" ? "active" : ""}`}><Link to="/">Home</Link></li>
                     <li className={`${pathname === "/sports" ? "active" : ""}`}><Link to="/sports">Sports</Link></li>
                     <li className={`${pathname === "/live" ? "active" : ""}`}><Link to="/live">Live Results</Link></li>
                     <li className={`${pathname === "/guidelines" ? "active" : ""}`}><Link to="/guidelines">Guidelines</Link></li>
                     <li className={`${pathname === "/contact" ? "active" : ""}`}><Link to="/contact">Contact Us</Link></li>
-                    <img className="menuIcon" onClick={()=>showNavbar()} src={navMenu} alt="" />
-                    {/* <img src={closeBtn} alt="" /> */}
-                </ul>
+                </div>
+                <div className={`hamburger${menuVisible}`}>
+                    <img onClick={()=>showNavbar()} src={navMenu} alt="" />
+                </div>
+                <div className={`closeMenu${menuVisible}`}>
+                    <img onClick={()=>closeMenu()} src={closeBtn} alt="" />
+                </div>
             </div>
 
         </>
