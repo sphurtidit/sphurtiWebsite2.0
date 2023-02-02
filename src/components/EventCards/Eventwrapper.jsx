@@ -1,5 +1,5 @@
 import EventCards from "./EventCards";
-import { events } from "../../Constants/Dummydata";
+import { events } from "../../constants/Dummydata";
 import "./EventCards.css";
 
 const Eventswrapper = () => {
