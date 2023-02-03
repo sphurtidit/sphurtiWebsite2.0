@@ -1,0 +1,13 @@
+.footer{
+    display: flex;
+    background-color: #111111;
+    justify-content: space-between;
+    padding: 0.5rem;
+}
+
+@media only screen and (max-width: 500px){
+    .footer{
+        flex-direction: column;
+        align-items: center;
+    }
+}
