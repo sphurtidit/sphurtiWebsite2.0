@@ -9,7 +9,7 @@ const EventCards = ({data}) => {
               <img src={data.thumbnail} className='cardimage' alt='img not available'></img>
           </div>
           <div className='div2'>
-              <Link to={data.link} >{data.title}</Link>
+              <Link to={data.link} className="title">{data.title}</Link>
           </div>
         </div>
 
