@@ -1,15 +1,23 @@
-import React from 'react'
-import './Sports.css';
-import image1 from "../../assets/grp147.png"
-import Eventswrapper from '../../components/EventCards/Eventwrapper';
+import "./Sports.css";
+import Eventswrapper from "../../components/EventCards/Eventwrapper";
 
 function Sports() {
-  return (
-    <div style={{backgroundImage:`url(${image1})`,width:'100%', height:'1000px'}}>
-      
-      <Eventswrapper/>
-    </div>
-  )
+	return (
+		<div
+			className="sportsPage"
+			style={{
+				position: "relative",
+				width: "100%",
+				padding: "2rem 1.5rem 3rem 1.5rem",
+				display: "flex",
+				justifyContent: "center",
+				alignItems: "center",
+				background: "transparent",
+			}}
+		>
+			<Eventswrapper />
+		</div>
+	);
 }
 
-export default Sports
+export default Sports;
