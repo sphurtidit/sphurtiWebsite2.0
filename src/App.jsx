@@ -2,6 +2,7 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import './App.css'
 import Navbar from './components/Navbar/Navbar'
+import Footer from './components/Footer/Footer'
 import { BrowserRouter as Router, Link, Route, Routes } from 'react-router-dom'
 import Home from './pages/Home/Home'
 import Sports from './pages/Sports/Sports'
@@ -9,7 +10,6 @@ import EventPage from './pages/EventPage/EventPage'
 import LiveResult from './pages/LiveResult/LiveResult'
 import Guidelines from './pages/Guidelines/Guidelines'
 import ContactUs from './pages/Contact/Contact'
-
 
 function App() {
 
@@ -25,6 +25,7 @@ function App() {
           <Route path="/contact" element={<ContactUs />} />
           <Route path="/eventpage" element={<EventPage />} />
         </Routes>
+        <Footer/>
       </Router>
     </>
   )

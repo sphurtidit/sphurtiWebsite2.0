@@ -7,7 +7,7 @@
 .navbar{
     display: flex;
     justify-content: space-between;
-    background-color: green;
+    background-color: #111111;
     padding: 0.5rem;
 }
 
@@ -44,20 +44,24 @@
     /* justify-content: space-between; */
 }
 
-.navbar>.listNavbar>li>a:hover{
+/* .navbar>.listNavbar>li>a:hover{
     color: rgb(12, 54, 12);
 }
 
 .navbar>.listNavbarvisible>li>a:hover{
     color: rgb(12, 54, 12);
-}
+} */
 
 .navbar>.listNavbar>.active>a{
     color: orange;
+    padding-bottom:0.5rem ;
+    border-bottom: 2px solid orange;
 }
 
 .navbar>.listNavbarvisible>.active>a{
     color: orange;
+    padding-bottom:0.5rem ;
+    border-bottom: 2px solid orange;
 }
 
 .navbar>.listNavbar>li>a{
