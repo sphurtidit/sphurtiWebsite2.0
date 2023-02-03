@@ -5,13 +5,12 @@ import "./EventCards.css";
 const EventCards = ({data}) => {
   return (
         <div className='cardcontainer'>
-        <div className='div1' >
-            <img src={data.thumbnail} className='cardimage' alt='img not available'></img>
-        </div>
-        <div className='div2'>
-            <p className='title'>{data.title}</p>
-            <Link to={data.link} ><button className='button'>Explore More...</button></Link>
-        </div>
+          <div className='div1' >
+              <img src={data.thumbnail} className='cardimage' alt='img not available'></img>
+          </div>
+          <div className='div2'>
+              <Link to={data.link} >{data.title}</Link>
+          </div>
         </div>
 
      
