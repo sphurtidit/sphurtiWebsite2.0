@@ -27,11 +27,11 @@ function Navbar() {
                     <img src={sphurtiLogo} alt="" />
                 </div>
                 <div className={`listNavbar${menuVisible}`}>
-                    <li className={`${pathname === "/" ? "active" : ""}`}><Link to="/">Home</Link></li>
-                    <li className={`${pathname === "/sports" ? "active" : ""}`}><Link to="/sports">Sports</Link></li>
-                    <li className={`${pathname === "/live" ? "active" : ""}`}><Link to="/live">Live Results</Link></li>
-                    <li className={`${pathname === "/guidelines" ? "active" : ""}`}><Link to="/guidelines">Guidelines</Link></li>
-                    <li className={`${pathname === "/contact" ? "active" : ""}`}><Link to="/contact">Contact Us</Link></li>
+                    <li className={`${pathname === "/" ? "active" : ""}`}><Link onClick={()=>closeMenu()} to="/">Home</Link></li>
+                    <li className={`${pathname === "/sports" ? "active" : ""}`}><Link onClick={()=>closeMenu()} to="/sports">Sports</Link></li>
+                    <li className={`${pathname === "/live" ? "active" : ""}`}><Link onClick={()=>closeMenu()} to="/live">Live Results</Link></li>
+                    <li className={`${pathname === "/guidelines" ? "active" : ""}`}><Link onClick={()=>closeMenu()} to="/guidelines">Guidelines</Link></li>
+                    <li className={`${pathname === "/contact" ? "active" : ""}`}><Link onClick={()=>closeMenu()} to="/contact">Contact Us</Link></li>
                 </div>
                 <div className={`hamburger${menuVisible}`}>
                     <img onClick={()=>showNavbar()} src={navMenu} alt="" />
