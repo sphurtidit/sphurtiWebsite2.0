@@ -1,12 +1,7 @@
-import React from 'react'
-import './LiveResult.css'
+import "./LiveResult.css";
 
 function LiveResult() {
-  return (
-    <div>
-      This is Live Result page.
-    </div>
-  )
+	return <div className="LiveResultsPage">This is Live Result page.</div>;
 }
 
-export default LiveResult
+export default LiveResult;
