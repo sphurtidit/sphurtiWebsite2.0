@@ -1,14 +1,13 @@
-import React from "react";
 import "./Contactcard.css";
 
-const Studentcontact= ({ state }) => {
+const Studentcontact = ({ data }) => {
+	console.log(data);
 	return (
-
 		<div className="cardcontainer">
-			<img src={state.thumbnail} alt="not available"></img>
+			<img src={data.imageUrl} alt="not available"></img>
 			<div className="div2">
-				<p className="name">{state.name}</p>
-                <p className="number">{state.phone}</p>
+				<p className="name">{data.name}</p>
+				<p className="number">{data.phone}</p>
 			</div>
 		</div>
 	);
