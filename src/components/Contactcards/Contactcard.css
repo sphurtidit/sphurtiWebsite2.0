@@ -41,4 +41,17 @@
 
 .div2 {
     margin-bottom: 0.8rem;
+    color: white;
+    display: flex;
+    flex-direction: column;
 }
+.name{
+    color: black;
+    align-items: center;
+    justify-content: center;
+}
+.number{
+    color: black;
+    align-items: center;
+    justify-content: center;
+    }

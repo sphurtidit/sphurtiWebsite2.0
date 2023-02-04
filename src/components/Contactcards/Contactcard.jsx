@@ -7,8 +7,8 @@ const Contactcard = ({ data }) => {
 		<div className="cardcontainer">
 			<img src={data.thumbnail} alt="not available"></img>
 			<div className="div2">
-				<p className="name">{}</p>
-                <p className="number">{}</p>
+				<p className="name">{data.name}</p>
+                <p className="number">{data.phone}</p>
 			</div>
 		</div>
 	);
