@@ -1,0 +1,57 @@
+.EventCard {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    column-gap: 3rem;
+    row-gap: 3rem;
+    width: 100%;
+    max-width: 974px;
+}
+
+.cardcontainer {
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0, 1);
+    border-radius: 12px;
+    border-color: black;
+    background: white;
+    width: 13rem;
+    overflow: hidden;
+    box-shadow: 0px 13px 10px -7px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.cardcontainer:hover {
+    box-shadow: 0px 30px 18px -8px rgba(0, 0, 0, 0.1);
+    transform: scale(1.05, 1.05);
+}
+
+.cardcontainer img {
+    object-fit: none;
+    width: 13rem;
+    height: 13rem;
+    background: url("../../assets/loading.gif");
+    background-size: 5rem;
+    color: transparent;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.div2 {
+    margin-bottom: 0.8rem;
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+.name{
+    color: black;
+    align-items: center;
+    justify-content: center;
+}
+.number{
+    color: black;
+    align-items: center;
+    justify-content: center;
+    }

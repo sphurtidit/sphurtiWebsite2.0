@@ -1,7 +1,13 @@
-import "./Contact.css";
+import React from 'react'
+import Contactwrapper from '../../components/Contactcards/Contactwrapper'
 
 function Contact() {
-	return <div>This is contact us page.</div>;
+  return (
+    <div>
+      <p>contacts</p>
+      <Contactwrapper/>
+    </div>
+  )
 }
 
-export default Contact;
+export default Contact
