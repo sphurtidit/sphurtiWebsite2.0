@@ -1,13 +1,11 @@
-import React from 'react'
-import Contactwrapper from '../../components/Contactcards/Contactwrapper'
+import Contactwrapper from "../../components/Contactcards/Contactwrapper";
 
 function Contact() {
-  return (
-    <div>
-      <p>contacts</p>
-      <Contactwrapper/>
-    </div>
-  )
+	return (
+		<div>
+			<Contactwrapper />
+		</div>
+	);
 }
 
-export default Contact
+export default Contact;

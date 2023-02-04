@@ -11,16 +11,18 @@
 
 .cardcontainer {
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0, 1);
-    border-radius: 12px;
-    border-color: black;
-    background: white;
+    border-radius: 15px;
+    border: 2px;
+    background-color: transparent;
     width: 13rem;
     overflow: hidden;
     box-shadow: 0px 13px 10px -7px rgba(0, 0, 0, 0.1);
     display: flex;
+    border: 2rem;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    margin-left: 2rem;
 }
 
 .cardcontainer:hover {
@@ -37,21 +39,48 @@
     color: transparent;
     background-repeat: no-repeat;
     background-position: center;
+    padding-left: 0.8rem;
+    padding-right: 0.8rem;
+    padding-top: 0.8rem;
+    padding-bottom: 0rem;
+
 }
 
 .div2 {
     margin-bottom: 0.8rem;
-    color: white;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    width: 87%;
+    align-self: center;
+    margin-left: 0.9rem;
+}
+.div1{
+    background-color: transparent;
+    
+}
+.cardcontainer>.cardinner{
+    border-width: 2rem;
+    border-color: aqua;
+}
+.div3{
     display: flex;
     flex-direction: column;
 }
+.div4{
+    display: flex;
+    flex-direction: row;
+}
+
+.div5 {
+    display: flex;
+    flex-direction: row;
+}
 .name{
-    color: black;
-    align-items: center;
-    justify-content: center;
+    display: flex;
+    align-self: center;
 }
 .number{
-    color: black;
-    align-items: center;
-    justify-content: center;
-    }
+    display: flex;
+    align-self: center;
+}

@@ -44,6 +44,90 @@
 .title {
 	color: black;
 	text-decoration: none;
-	align-items: center;
+	display: flex;
+	align-self: center;
 	justify-content: center;
 }
+.EventCard {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: flex-start;
+	column-gap: 3rem;
+	row-gap: 3rem;
+	width: 100%;
+	max-width: 974px;
+}
+
+.cardcontainer {
+	transition: all 0.4s cubic-bezier(0.175, 0.885, 0, 1);
+	border-radius: 12px;
+	border: 2px;
+	background-color: transparent;
+	border-color: white;
+	width: 13rem;
+	overflow: hidden;
+	box-shadow: 0px 13px 10px -7px rgba(0, 0, 0, 0.1);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	margin-left: 2rem;
+}
+
+.cardcontainer:hover {
+	box-shadow: 0px 30px 18px -8px rgba(0, 0, 0, 0.1);
+	transform: scale(1.05, 1.05);
+}
+
+.cardcontainer img {
+	object-fit: none;
+	width: 13rem;
+	height: 13rem;
+	background: url("../../assets/loading.gif");
+	background-size: 5rem;
+	color: transparent;
+	background-repeat: no-repeat;
+	background-position: center;
+	padding-left: 0.8rem;
+	padding-right: 0.8rem;
+	padding-top: 0.8rem;
+	padding-bottom: 0rem;
+
+}
+
+.div2 {
+	margin-bottom: 0.8rem;
+	background-color: white;
+	display: flex;
+	flex-direction: column;
+	width: 87%;
+	align-self: center;
+	margin-left: 0.9rem;
+}
+
+.div1 {
+	background-color: transparent;
+
+}
+
+.cardinner {
+	border-width: 3rem;
+	border-color: white;
+}
+
+.div3 {
+	display: flex;
+	flex-direction: column;
+}
+
+.div4 {
+	display: flex;
+	flex-direction: row;
+}
+
+.div5 {
+	display: flex;
+	flex-direction: row;
+}
+
