@@ -32,27 +32,31 @@ const Contactwrapper = () => {
 	return (
 		<>
 			{loading && <h1>Loading...</h1>}
-			<h1
-				style={{
-					color: "white",
-					textAlign: "center",
-					marginBottom: "1rem",
-				}}
-			>
-				Faculty contact
-			</h1>
+			{!loading && (
+				<h1
+					style={{
+						color: "white",
+						textAlign: "center",
+						marginBottom: "1rem",
+					}}
+				>
+					Faculty contact
+				</h1>
+			)}
 			<div className="div4">
 				{data && data.map((item, id) => <Contactcard data={item} key={id} />)}
 			</div>
-			<h1
-				style={{
-					color: "white",
-					textAlign: "center",
-					marginTop: "2rem",
-				}}
-			>
-				Student contact
-			</h1>
+			{!loading && (
+				<h1
+					style={{
+						color: "white",
+						textAlign: "center",
+						marginTop: "2rem",
+					}}
+				>
+					Student contact
+				</h1>
+			)}
 			<div className="div5">
 				{state &&
 					state.map((item, id) => <Studentcontact data={item} key={id} />)}
