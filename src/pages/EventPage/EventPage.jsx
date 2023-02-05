@@ -1,10 +1,12 @@
 import { useLocation } from "react-router-dom";
 import "./EventPage.css";
+import Circles from "../../components/Circles/Circles";
 
 function EventPage() {
 	const location = useLocation();
 	return (
 		<div className="EventPage">
+			<Circles />
 			<h1>{location.state.data.name}</h1>
 			<div>
 				<ul>

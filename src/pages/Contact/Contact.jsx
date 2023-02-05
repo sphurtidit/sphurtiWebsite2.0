@@ -1,5 +1,6 @@
 import Contactwrapper from "../../components/Contactcards/Contactwrapper";
 import "./Contact.css";
+import Circles from "../../components/Circles/Circles";
 
 function Contact() {
 	return (
@@ -15,6 +16,7 @@ function Contact() {
 				flexDirection: "column",
 			}}
 		>
+			<Circles />
 			<Contactwrapper />
 		</div>
 	);
