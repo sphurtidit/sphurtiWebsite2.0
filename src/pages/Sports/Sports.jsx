@@ -1,5 +1,6 @@
 import "./Sports.css";
 import Eventswrapper from "../../components/EventCards/Eventwrapper";
+import Circles from "../../components/Circles/Circles";
 
 function Sports() {
 	return (
@@ -14,6 +15,7 @@ function Sports() {
 				alignItems: "center",
 			}}
 		>
+			<Circles />
 			<Eventswrapper />
 		</div>
 	);

@@ -1,0 +1,17 @@
+.blueCircle {
+	position: fixed;
+	right: 0;
+	top: 28vh;
+	z-index: -1;
+	height: 10vw;
+	min-height: 7rem;
+}
+
+.yellowCircle {
+	position: fixed;
+	left: 0;
+	top: 40vh;
+	z-index: -1;
+	height: 7vw;
+	min-height: 4rem;
+}
