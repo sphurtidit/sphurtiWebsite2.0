@@ -1,3 +1,16 @@
+.sportsPage::before {
+	content: "";
+	position: fixed;
+	z-index: -1;
+	background: url("../../assets/rectangle26.png");
+	background-size: cover;
+	background-position: center;
+	height: 100vh;
+	width: 100vw;
+	top: 0;
+	left: 0;
+}
+
 .EventCard {
 	display: flex;
 	flex-wrap: wrap;
@@ -7,7 +20,7 @@
 	row-gap: 3rem;
 	width: 100%;
 	max-width: 974px;
-	min-height: calc(100vh - 62px - 8rem);
+	min-height: 100vh;
 }
 
 .cardcontainer {

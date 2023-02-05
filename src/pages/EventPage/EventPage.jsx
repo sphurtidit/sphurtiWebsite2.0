@@ -1,9 +1,11 @@
 import { useLocation } from "react-router-dom";
+import "./EventPage.css";
 
 function EventPage() {
 	const location = useLocation();
 	return (
-		<div style={{ display: "flex", flexDirection: "column", padding: "1rem" }}>
+		<div className="EventPage">
+			<h1>{location.state.data.name}</h1>
 			<div>
 				<ul>
 					<li>name: {location.state.data.name}</li>
