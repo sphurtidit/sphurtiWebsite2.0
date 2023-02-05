@@ -1,8 +1,8 @@
 .home {
-	background-image: url("../../assets/homeBackground.png");
+	background-image: url("../../assets/Group149.png");
 	background-repeat: no-repeat;
 	background-position-x: center;
-	background-size: cover;
+	background-size:auto;
 	width: 100%;
 }
 
@@ -20,16 +20,28 @@
 	font-weight: 800;
 	font-size: 5rem;
 	text-align: center;
-	border-top: 1px solid grey;
-	border-left: 1px solid grey;
-	border-bottom: 1px solid grey;
 	padding: 5rem;
-	padding-left: 20rem;
+	padding-left: 15rem;
+	padding-top: 15rem;
 	margin: 2rem;
 }
 
-.home > .message > .facuiltyMessage {
-	display: flex;
+.home > .socials{
+	margin-left: 2rem;
+	position: absolute;
+	top: 83rem;
+}
+
+.home>.socials>div>img{
+	margin: 1rem;
+	width: 2.5rem;
+	background-color: white;
+	border: 1px white;
+	border-radius: 5px;
+}
+
+.home > .messages {
+	margin-top: 30rem;
 }
 
 @media only screen and (max-width: 1000px) {
@@ -37,17 +49,29 @@
 		justify-content: center;
 	}
 	.home > .mainTitle > p {
-		border-top: none;
-		border-left: none;
-		border-bottom: none;
 		padding: 0;
 		padding-left: 0;
 		margin: 0;
+		padding-top: 0;
 	}
 }
 
 @media only screen and (max-width: 475px) {
 	.home > .mainTitle > p {
-		font-size: 3rem;
+		font-size: 4rem;
+	}
+
+	.home > .socials{
+		margin-left: 1rem;
+	}
+
+	.home > .messages {
+		margin-top: 25rem;
+	}
+}
+
+@media only screen and (max-width: 375px){
+	.home > .socials{
+		margin-left: 0rem;
 	}
 }

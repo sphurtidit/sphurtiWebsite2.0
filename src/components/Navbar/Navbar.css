@@ -65,7 +65,7 @@
 	background: rgba(0, 0, 0, 0.445);
 	backdrop-filter: blur(10px);
 	transform: translateY(-100vh);
-	transition: 0.1s ease-in;
+	transition: 0.2s ease-in;
 	border-radius: 100%;
 	display: flex;
 	justify-content: center;
