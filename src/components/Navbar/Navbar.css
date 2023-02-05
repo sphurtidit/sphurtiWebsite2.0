@@ -93,13 +93,14 @@
 	gap: 2rem;
 }
 
-.mobileMenu > p {
+.mobileMenu > a {
 	font-weight: 600;
 	font-style: normal;
 	font-size: 2rem;
 	color: white;
 	width: max-content;
 	border-bottom: 2px solid transparent;
+	text-decoration: none;
 }
 
 .mobileMenu > .active {
@@ -107,7 +108,7 @@
 	color: orange;
 }
 
-.mobileMenu > p:hover {
+.mobileMenu > a:hover {
 	border-bottom: 2px solid orange;
 }
 /*  */
