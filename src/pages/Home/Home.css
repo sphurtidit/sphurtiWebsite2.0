@@ -1,56 +1,53 @@
-.home{
-    background-image: url("../../assets/homeBackground.png");
-    background-repeat: no-repeat;
-    background-position-x:center;
-    /* background-size: 100vw; */
-   
-    /* overflow-x: hidden ; */
+.home {
+	background-image: url("../../assets/homeBackground.png");
+	background-repeat: no-repeat;
+	background-position-x: center;
+	background-size: cover;
+	width: 100%;
 }
 
-.home>.mainTitle{
-    height: 100vh;
-    display: flex;
-    justify-content: start;
-    align-items: center;
+.home > .mainTitle {
+	height: 100vh;
+	display: flex;
+	justify-content: start;
+	align-items: center;
 }
 
-.home>.mainTitle>p{
-    font-family: 'Futura BdCn BT', sans-serif;
-    font-style: normal;
-    color: white;
-    font-weight: 800;
-    font-size: 5rem;
-    text-align: center;
-    border-top: 1px solid grey ;
-    border-left: 1px solid grey;
-    border-bottom: 1px solid grey;
-    padding: 5rem;
-    padding-left: 20rem;
-    margin: 2rem;
+.home > .mainTitle > p {
+	font-family: "Futura BdCn BT", sans-serif;
+	font-style: normal;
+	color: white;
+	font-weight: 800;
+	font-size: 5rem;
+	text-align: center;
+	border-top: 1px solid grey;
+	border-left: 1px solid grey;
+	border-bottom: 1px solid grey;
+	padding: 5rem;
+	padding-left: 20rem;
+	margin: 2rem;
 }
 
-.home>.message>.facuiltyMessage{
-    display: flex;
+.home > .message > .facuiltyMessage {
+	display: flex;
 }
 
-@media only screen and (max-width: 1000px){
-    .home>.mainTitle{
-        justify-content: center;
-    }
-    .home>.mainTitle>p{
-        border-top:none ;
-        border-left: none;
-        border-bottom: none;
-        padding:0;
-        padding-left:0;
-        margin:0;
-    }
+@media only screen and (max-width: 1000px) {
+	.home > .mainTitle {
+		justify-content: center;
+	}
+	.home > .mainTitle > p {
+		border-top: none;
+		border-left: none;
+		border-bottom: none;
+		padding: 0;
+		padding-left: 0;
+		margin: 0;
+	}
 }
 
-@media only screen and (max-width: 475px){
-    .home>.mainTitle>p{
-        font-size: 3rem;
-    }
-
-
+@media only screen and (max-width: 475px) {
+	.home > .mainTitle > p {
+		font-size: 3rem;
+	}
 }
