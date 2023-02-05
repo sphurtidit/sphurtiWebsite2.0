@@ -1,5 +1,6 @@
 import "./Sports.css";
 import Eventswrapper from "../../components/EventCards/Eventwrapper";
+import rectangle from "../../assets/Rectangle.png"
 
 function Sports() {
 	return (
