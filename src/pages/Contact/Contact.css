@@ -1,12 +1,12 @@
-.ContactPage::before {
-	content: "";
-	position: fixed;
-	z-index: -1;
-	background: url("../../assets/rectangle26.png");
-	background-size: cover;
-	background-position: center;
-	height: 100vh;
-	width: 100vw;
-	top: 0;
-	left: 0;
+
+.socials{
+    display: flex;
+    flex-direction:column;
+    margin-top: 1rem;
+    align-self: flex-start;
 }
+.icons{
+    width: 3vw;
+    margin-bottom: 0.5rem;
+}
+
