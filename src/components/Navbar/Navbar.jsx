@@ -69,17 +69,40 @@ function Navbar() {
 					/>
 				</div>
 				<div className="mobileMenu">
-					<p className={`${pathname === "/" ? "active" : ""}`}>Home</p>
-					<p className={`${pathname === "/sports" ? "active" : ""}`}>Sports</p>
-					<p className={`${pathname === "/live" ? "active" : ""}`}>
+					<Link
+						to="/"
+						className={`${pathname === "/" ? "active" : ""}`}
+						onClick={() => setNavOpen("")}
+					>
+						Home
+					</Link>
+					<Link
+						to="/sports"
+						className={`${pathname === "/sports" ? "active" : ""}`}
+						onClick={() => setNavOpen("")}
+					>
+						Sports
+					</Link>
+					<Link
+						to="/live"
+						className={`${pathname === "/live" ? "active" : ""}`}
+						onClick={() => setNavOpen("")}
+					>
 						Live Results
-					</p>
-					<p className={`${pathname === "/guidelines" ? "active" : ""}`}>
+					</Link>
+					<Link
+						to="/guidelines"
+						className={`${pathname === "/guidelines" ? "active" : ""}`}
+						onClick={() => setNavOpen("")}
+					>
 						Guidelines
-					</p>
-					<p className={`${pathname === "/contact" ? "active" : ""}`}>
+					</Link>
+					<Link
+						to="/contact"
+						className={`${pathname === "/contact" ? "active" : ""}`}
+					>
 						Contact Us
-					</p>
+					</Link>
 				</div>
 			</div>
 		</>
