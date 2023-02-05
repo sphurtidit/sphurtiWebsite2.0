@@ -1,143 +1,132 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+.navbar {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 5rem;
+	position: fixed;
+	top: 0;
+	width: 100vw;
+	z-index: 1000;
+	background-color: black;
 }
 
-.navbar{
-    display: flex;
-    justify-content: space-between;
-    background-color: #111111;
-    padding: 0.5rem;
+.navLeft {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding-left: 2rem;
 }
 
-.navbar>img{
-    align-items: flex-start;
-}
-.navbar>.logo>img{
-    width: 5rem;
-    margin-left: 1rem;
+.navLeft > img {
+	width: 3.5rem;
 }
 
-.navbar>.listNavbar{
-    display: flex;
-    align-items: center;
-}
-.navbar>.listNavbarvisible{
-    display: none;
-    align-items: center;
+.navCenter {
+	display: flex;
+	align-items: center;
+	gap: 3rem;
+	padding-right: 2rem;
 }
 
-.navbar>.listNavbar>li{
-    list-style: none;
-    font-size: 1.2rem;
-    margin: 2rem;
-    align-items: center;
-    /* justify-content: space-between; */
+.navCenter > .active {
+	border-bottom: 2px solid orange;
+	color: orange;
 }
 
-.navbar>.listNavbarvisible>li{
-    list-style: none;
-    font-size: 1.2rem;
-    margin: 2rem;
-    align-items: center;
-    /* justify-content: space-between; */
+.navCenter > a {
+	font-style: normal;
+	font-weight: 500;
+	color: white;
+	padding-bottom: 0.3rem;
+	font-size: 1.4rem;
+	text-decoration: none;
 }
 
-/* .navbar>.listNavbar>li>a:hover{
-    color: rgb(12, 54, 12);
+.navRight {
+	height: 100%;
+	justify-content: center;
+	align-items: center;
+	padding-right: 2rem;
+	display: none;
 }
 
-.navbar>.listNavbarvisible>li>a:hover{
-    color: rgb(12, 54, 12);
-} */
-
-.navbar>.listNavbar>.active>a{
-    color: orange;
-    padding-bottom:0.5rem ;
-    border-bottom: 2px solid orange;
+.navRight > img {
+	width: 2.5rem;
 }
 
-.navbar>.listNavbarvisible>.active>a{
-    color: orange;
-    padding-bottom:0.5rem ;
-    border-bottom: 2px solid orange;
+/*  */
+.nameMenuOpen {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1000000;
+	width: 100vw;
+	height: 100vh;
+	background: rgba(0, 0, 0, 0.445);
+	backdrop-filter: blur(10px);
+	transform: translateY(-100vh);
+	transition: 0.1s ease-in;
+	border-radius: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
-.navbar>.listNavbar>li>a{
-    cursor: pointer;
-    text-decoration: none;
-    color: white;
-    font-weight: 600;
+.navMenuOpenshow {
+	transform: translateY(0);
+	border-radius: 0;
 }
 
-.navbar>.listNavbarvisible>li>a{
-    cursor: pointer;
-    text-decoration: none;
-    color: white;
-    font-weight: 600;
+.navMenuCloseButton {
+	position: absolute;
+	top: 2rem;
+	right: 2rem;
 }
 
-.navbar>.hamburger{
-    display: none;
+.navMenuCloseButton > img {
+	width: 2rem;
 }
 
-.navbar>.closeMenu{
-    display: none;
+.mobileMenu {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
 }
 
-.listNavbarvisible{
-    display: none;
+.mobileMenu > p {
+	font-weight: 600;
+	font-style: normal;
+	font-size: 2rem;
+	color: white;
+	width: max-content;
+	border-bottom: 2px solid transparent;
 }
 
-.hamburgervisible{
-    display: none;
+.mobileMenu > .active {
+	border-bottom: 2px solid orange;
+	color: orange;
 }
 
-.closeMenuvisible{
-    display: none;
+.mobileMenu > p:hover {
+	border-bottom: 2px solid orange;
 }
+/*  */
 
-@media only screen and (max-width: 768px)
-{
-    .navbar>.listNavbar{
-        display: none;
-    }
-
-    .navbar>.hamburger{
-        display: flex;
-        align-items:flex-start;
-    }
-    .navbar>.hamburger>img{
-        width: 5rem;
-        margin-top: 0.5rem;
-    }
-
-    .navbar>.closeMenu{
-        display: none;
-    }    
-
-    .navbar>.listNavbarvisible{
-        display: flex;
-        flex-direction: column;
-        margin: 0 auto;
-    }
-
-    .navbar>.hamburgervisible{
-        display: none;
-    }
-
-    .navbar>.closeMenuvisible{
-        display: flex;
-        align-items: flex-start;
-        margin-top:1rem ;
-    }
-
-    .navbar>.closeMenuvisible>img{
-        width: 2rem;
-    }
-
-    .navbar>.logovisible{
-        display: none;
-    }
+@media only screen and (max-width: 870px) {
+	.navRight {
+		display: flex;
+		padding-right: 1rem;
+	}
+	.navLeft {
+		padding-left: 1rem;
+	}
+	.navCenter {
+		display: none;
+	}
+	.navbar {
+		height: 4rem;
+	}
+	.navLeft > img {
+		width: 3rem;
+	}
 }
