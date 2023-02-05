@@ -1,4 +1,3 @@
-
 import { doc, onSnapshot } from "firebase/firestore";
 import { useEffect, useState } from "react";
 import { db } from "../../Firebase";
@@ -22,6 +21,7 @@ function Guidelines() {
 	return (
 		<div className="Guidlinespage">
 			{loading && <h1>Loading...</h1>}
+			{!loading && <h1>General Guidlines</h1>}
 			<ul>
 				{data &&
 					data.map((item, id) => {
