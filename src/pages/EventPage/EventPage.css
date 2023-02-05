@@ -9,6 +9,10 @@
 	color: white;
 }
 
+.EventPage li {
+	font-size: 1.2rem;
+}
+
 .EventPage::before {
 	content: "";
 	position: fixed;
