@@ -6,6 +6,7 @@
 	align-items: center;
 	flex-wrap: wrap;
 	padding: 1rem;
+	padding-bottom: 1.5rem;
 }
 
 .footer > img {
