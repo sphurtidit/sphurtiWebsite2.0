@@ -1,7 +1,5 @@
 import "./Home.css";
 import React, { useEffect, useState } from 'react'
-import homecourt from '../../assets/basketball-court.png'
-import player from '../../assets/basketball-player.png'
 import { doc, onSnapshot } from "firebase/firestore";
 import { db } from "../../Firebase";
 import MessageCard from "../../components/MessageCard/MessageCard";
@@ -33,16 +31,15 @@ function Home() {
       <div className="mainTitle">
         <Zoom>
 
-        <p>SPHURTI <br></br>2023</p>
+          <p>SPHURTI <br></br>2023</p>
         </Zoom>
       </div>
       <div className="socials">
         <Zoom>
-
-        <div><img src={facebook} alt="" /></div>
-        <div><img src={insta} alt="" /></div>
-        <div><img src={twitter} alt="" /></div>
-        <div><img src={youtube} alt="" /></div>
+          <a href="/"><div><img src={facebook} alt="" /></div></a>
+          <a href="/"><div><img src={insta} alt="" /></div></a>
+          <a href="/"><div><img src={twitter} alt="" /></div></a>
+          <a href="/"><div><img src={youtube} alt="" /></div></a>
         </Zoom>
       </div>
       <div className="messages">
@@ -50,7 +47,7 @@ function Home() {
         {data &&
           data.map((item, id) => {
             return (
-              <MessageCard data={item} key={id}/>
+              <MessageCard data={item} key={id} />
             );
           })}
       </div>

@@ -32,7 +32,7 @@
 	top: 83rem;
 }
 
-.home>.socials>div>img{
+.home>.socials>a>div>img{
 	margin: 1rem;
 	width: 2.5rem;
 	background-color: white;
