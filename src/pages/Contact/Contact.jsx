@@ -13,6 +13,7 @@ function Contact() {
 				display: "flex",
 				justifyContent: "center",
 				alignItems: "center",
+				flexDirection: "column",
 			}}
 		>
 			<Contactwrapper />

@@ -7,7 +7,7 @@ import Studentcontact from "./Studentcontact";
 
 const Contactwrapper = () => {
 	const [data, setData] = useState([]);
-    const [state,setState]=useState([]);
+	const [state, setState] = useState([]);
 	const [loading, setLoading] = useState(true);
 	useEffect(() => {
 		const unsub = onSnapshot(doc(db, "contact", "faculty_contact"), (doc) => {
@@ -19,7 +19,7 @@ const Contactwrapper = () => {
 			unsub;
 		};
 	}, []);
-    useEffect(() => {
+	useEffect(() => {
 		const unsub2 = onSnapshot(doc(db, "contact", "student_contact"), (doc) => {
 			setState(doc.data().student_contact);
 			setLoading(false);
@@ -30,21 +30,35 @@ const Contactwrapper = () => {
 		};
 	}, []);
 	return (
-    <div className="ContactCard">
-      {loading && <h1>Loading...</h1>}
-      <div className="div3">
-        <p className="heading">Faculty Contact</p>
-        <div className="div4">
-          {data && data.map((item, id) => <Contactcard data={item} key={id} />)}
-        </div>
-        <p className="heading">Student Contact</p>
-        <div className="div5">
-          {state &&
-            state.map((item, id) => <Studentcontact data={item} key={id} />)}
-        </div>
-      </div>
-    </div>
-  );
+		<>
+			{loading && <h1>Loading...</h1>}
+			<h1
+				style={{
+					color: "white",
+					textAlign: "center",
+					marginBottom: "1rem",
+				}}
+			>
+				Faculty contact
+			</h1>
+			<div className="div4">
+				{data && data.map((item, id) => <Contactcard data={item} key={id} />)}
+			</div>
+			<h1
+				style={{
+					color: "white",
+					textAlign: "center",
+					marginTop: "2rem",
+				}}
+			>
+				Student contact
+			</h1>
+			<div className="div5">
+				{state &&
+					state.map((item, id) => <Studentcontact data={item} key={id} />)}
+			</div>
+		</>
+	);
 };
 
 export default Contactwrapper;

@@ -23,6 +23,10 @@ body {
 	padding-top: 4.75rem;
 }
 
+::-webkit-scrollbar {
+	display: none;
+}
+
 @media only screen and (max-width: 870px) {
 	.App {
 		padding-top: 3.85rem;
