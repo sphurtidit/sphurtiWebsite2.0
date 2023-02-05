@@ -5,6 +5,7 @@ function EventPage() {
 	const location = useLocation();
 	return (
 		<div className="EventPage">
+			<h1>{location.state.data.name}</h1>
 			<div>
 				<ul>
 					<li>name: {location.state.data.name}</li>
