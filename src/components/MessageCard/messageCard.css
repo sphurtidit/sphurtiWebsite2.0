@@ -1,0 +1,31 @@
+.messageCard{
+    display: flex;
+    align-items: center;
+    justify-content:start;
+    /* padding: 0 5rem; */
+    /* margin-bottom: 5rem; */
+    margin-left: 3rem;
+}
+
+.messageCard>.msgImg>img{
+    width: 15rem;
+    margin: 7rem;
+}
+
+.messageCard>.messageDetail>.message{
+    font-size: 1.3rem;
+    color: #3D3D3D;
+}
+
+.messageCard>.messageDetail>.identity{
+    font-size: 1.3rem;
+    color: #8334C7;
+    font-weight: 600;
+}
+
+@media only screen and (max-width:850px){
+    .messageCard{
+        flex-direction: column;
+    }
+}
+

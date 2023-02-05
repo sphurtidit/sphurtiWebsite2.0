@@ -5,6 +5,11 @@ import player from '../../assets/basketball-player.png'
 import { doc, onSnapshot } from "firebase/firestore";
 import { db } from "../../Firebase";
 import MessageCard from "../../components/MessageCard/MessageCard";
+import facebook from '../../assets/facebook-icon.png'
+import insta from '../../assets/insta-icon.png'
+import twitter from '../../assets/twitter-icon.png'
+import youtube from '../../assets/youtube-icon.png'
+import { Zoom } from "react-reveal";
 
 function Home() {
 
@@ -26,7 +31,19 @@ function Home() {
   return (
     <div className="home">
       <div className="mainTitle">
+        <Zoom>
+
         <p>SPHURTI <br></br>2023</p>
+        </Zoom>
+      </div>
+      <div className="socials">
+        <Zoom>
+
+        <div><img src={facebook} alt="" /></div>
+        <div><img src={insta} alt="" /></div>
+        <div><img src={twitter} alt="" /></div>
+        <div><img src={youtube} alt="" /></div>
+        </Zoom>
       </div>
       <div className="messages">
         {loading && <h1>Loading...</h1>}
