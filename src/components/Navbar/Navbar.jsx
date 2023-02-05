@@ -100,6 +100,7 @@ function Navbar() {
 					<Link
 						to="/contact"
 						className={`${pathname === "/contact" ? "active" : ""}`}
+						onClick={() => setNavOpen("")}
 					>
 						Contact Us
 					</Link>
