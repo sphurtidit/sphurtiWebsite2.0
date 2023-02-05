@@ -52,6 +52,24 @@
 	flex-direction: column;
 }
 
+.cardcontainer > a:nth-child(2) {
+	display: flex;
+	width: 100%;
+	justify-content: center;
+	align-items: center;
+	background-color: rgba(255, 255, 255, 0.3);
+	border-radius: 12px;
+	padding: 0.5rem;
+	flex-direction: column;
+	text-decoration: none;
+}
+
+.cardcontainer a > div {
+	text-decoration: none;
+	color: white;
+	font-weight: 500;
+}
+
 .cardcontainer > div > a {
 	text-decoration: none;
 	color: white;
