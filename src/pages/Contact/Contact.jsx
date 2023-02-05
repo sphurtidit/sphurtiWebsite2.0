@@ -1,6 +1,7 @@
 import Contactwrapper from "../../components/Contactcards/Contactwrapper";
 import "./Contact.css";
 import Circles from "../../components/Circles/Circles";
+import Social from "../../components/Social/Social";
 
 function Contact() {
 	return (
@@ -17,6 +18,7 @@ function Contact() {
 			}}
 		>
 			<Circles />
+			<Social />
 			<Contactwrapper />
 		</div>
 	);

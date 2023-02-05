@@ -15,3 +15,12 @@
 	height: 7vw;
 	min-height: 4rem;
 }
+
+.purpleCircle {
+	position: fixed;
+	left: 0;
+	bottom: 10vh;
+	z-index: -1;
+	height: 5vw;
+	min-height: 3rem;
+}
