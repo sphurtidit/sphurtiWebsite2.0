@@ -5,15 +5,18 @@
 }
 
 .App::before {
+	display: flex;
 	content: "";
-	position: fixed;
+	position:absolute;
 	width: 100vw;
-	height: 100vh;
+	height:100vh;
 	top: 0;
 	left: 0;
-	background: url("./assets/grp147.png");
+	/* background: url("./assets/grp147.png"); */
 	background-repeat: no-repeat;
 	background-size: cover;
-	/* background-position: center; */
+	background-position: center;
 	z-index: -1;
+	align-items: center;
+	justify-content: center;
 }
