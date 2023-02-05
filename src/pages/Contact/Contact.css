@@ -11,14 +11,13 @@
 	left: 0;
 }
 
-.socials{
-    display: flex;
-    flex-direction:column;
-    margin-top: 1rem;
-    align-self: flex-start;
+.socials {
+	display: flex;
+	flex-direction: column;
+	margin-top: 1rem;
+	align-self: flex-start;
 }
-.icons{
-    width: 3vw;
-    margin-bottom: 0.5rem;
+.icons {
+	width: 3vw;
+	margin-bottom: 0.5rem;
 }
-
