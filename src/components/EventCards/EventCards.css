@@ -89,9 +89,9 @@
 	color: transparent;
 	background-repeat: no-repeat;
 	background-position: center;
-	padding-left: 0.8rem;
-	padding-right: 0.8rem;
-	padding-top: 0.8rem;
+	padding-left: 1rem;
+	padding-right: 1rem;
+	padding-top: 1rem;
 	padding-bottom: 0rem;
 
 }
@@ -101,9 +101,9 @@
 	background-color: white;
 	display: flex;
 	flex-direction: column;
-	width: 87%;
+	width: 86%;
 	align-self: center;
-	margin-left: 0.9rem;
+	margin-left: 1rem;
 }
 
 .div1 {
