@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { db } from "../../Firebase";
 
 import "./GuideLines.css";
+import Circles from "../../components/Circles/Circles";
 
 function Guidelines() {
 	const [data, setData] = useState([]);
@@ -22,6 +23,7 @@ function Guidelines() {
 		<div className="Guidlinespage">
 			{loading && <h1>Loading...</h1>}
 			{!loading && <h1>General Guidlines</h1>}
+			<Circles />
 			<ul>
 				{data &&
 					data.map((item, id) => {
