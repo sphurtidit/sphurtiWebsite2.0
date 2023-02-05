@@ -1,12 +1,11 @@
 import Contactwrapper from "../../components/Contactcards/Contactwrapper";
-import image1 from "../../assets/rectangle26.png";
+import "./Contact.css";
 
 function Contact() {
 	return (
 		<div
+			className="ContactPage"
 			style={{
-				backgroundImage: `url(${image1})`,
-				backgroundRepeat: "no-repeat",
 				width: "100%",
 				position: "relative",
 				padding: "2rem 1.5rem 3rem 1.5rem",
