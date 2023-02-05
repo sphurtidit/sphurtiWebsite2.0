@@ -30,16 +30,19 @@ const Contactwrapper = () => {
 		};
 	}, []);
 	return (
-    <div className="EventCard">
+    <div className="ContactCard">
       {loading && <h1>Loading...</h1>}
-        <div className="div3">
-            <div className="div4">
-                {data && data.map((item, id) => <Contactcard data={item} key={id} />)}
-            </div>
-            <div className="div5">
-                {state && state.map((item, id) => <Studentcontact data={item} key={id} />)}
-            </div>
+      <div className="div3">
+        <p className="heading">Faculty Contact</p>
+        <div className="div4">
+          {data && data.map((item, id) => <Contactcard data={item} key={id} />)}
         </div>
+        <p className="heading">Student Contact</p>
+        <div className="div5">
+          {state &&
+            state.map((item, id) => <Studentcontact data={item} key={id} />)}
+        </div>
+      </div>
     </div>
   );
 };
