@@ -27,7 +27,7 @@ function Contact() {
         <Link to="">
           <img src={fb} className="icons" alt="img not available"></img>
         </Link>
-        <Link to="https://www.instagram.com/dit_sphurti_/">
+        <Link target="_blank" to="https://www.instagram.com/dit_sphurti_/">
           <img src={ig} className="icons" alt="img not available"></img>
         </Link>
         <Link to="">
