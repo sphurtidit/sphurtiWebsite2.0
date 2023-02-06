@@ -32,12 +32,9 @@
 	top: 83rem;
 }
 
-.home>.socials>a>div>img{
+.home>.socials>div>img{
 	margin: 1rem;
 	width: 2.5rem;
-	background-color: white;
-	border: 1px white;
-	border-radius: 5px;
 }
 
 .home > .messages {

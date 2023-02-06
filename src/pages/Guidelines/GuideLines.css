@@ -1,7 +1,7 @@
 .Guidlinespage {
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
+	justify-content: flex-start;
 	align-items: center;
 	padding: 2rem;
 	min-height: 100vh;
@@ -20,6 +20,10 @@
 	width: 100vw;
 	top: 0;
 	left: 0;
+}
+
+.Guidlinespage li {
+	font-size: 1.2rem;
 }
 
 .Guidlinespage h1 {
