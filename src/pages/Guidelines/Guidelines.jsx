@@ -22,7 +22,7 @@ function Guidelines() {
 	return (
 		<div className="Guidlinespage">
 			{loading && <h1>Loading...</h1>}
-			{!loading && <h1>General Guidlines</h1>}
+			{!loading && <h1>General Guidelines</h1>}
 			<Circles />
 			<ul>
 				{data &&
