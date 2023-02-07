@@ -1,10 +1,18 @@
-import { useLocation } from "react-router-dom";
+import { Router, useLocation } from "react-router-dom";
 import "./EventPage.css";
 import Circles from "../../components/Circles/Circles";
 
 
+
 function EventPage() {
 	const location = useLocation();
+ function handleChange(){
+    alert("registration is closed");
+  }
+  // const handleChange2=()=> {
+  //   Router.push(location.state.data.registration_link)
+   
+  // }
 	return (
     <div className="EventPage">
       <Circles />
@@ -27,7 +35,16 @@ function EventPage() {
       </div>
 
       <div className="buttondiv">
-        <button className="button">Resister now</button>
+        <button
+          className="button"
+          onClick={
+            location.state.data.registration_is_live == true
+              ? console.log("registration is open")
+              : handleChange
+          }
+        >
+          Register now
+        </button>
       </div>
     </div>
   );
