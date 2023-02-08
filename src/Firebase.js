@@ -2,12 +2,12 @@ import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 import "firebase/database"
 const firebaseConfig = {
-    apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
-    authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
-    projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
-    storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
-    messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
-    appId: import.meta.env.VITE_FIREBASE_APP_ID
+    apiKey: "AIzaSyB2xxwTMBSOdQwVClmu_w3ScSH4WX9BBxw",
+    authDomain: "sphurti-dit.firebaseapp.com",
+    projectId: "sphurti-dit",
+    storageBucket: "sphurti-dit.appspot.com",
+    messagingSenderId: "331139649234",
+    appId: "1:331139649234:web:001282b68580562239e70b"
 };
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);

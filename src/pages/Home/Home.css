@@ -1,4 +1,4 @@
-.home {
+/* .home {
 	background-image: url("../../assets/Group149.png");
 	background-repeat: no-repeat;
 	background-position-x: center;
@@ -71,4 +71,89 @@
 	.home > .socials{
 		margin-left: 0rem;
 	}
+} */
+
+.home {
+	background-color: black;
+	display: flex;
+	width: 100vw;
+	height: 95vh;
+	justify-content: space-around;
+	align-items:center;
+	padding: 0 6rem;
 }
+
+.home>.theGame {
+	font-family: 'Anton';
+	font-weight: 400;
+	font-style: normal;
+	font-size: 13rem;
+	background: linear-gradient(180.13deg, #1E1E1E 0.11%, rgba(30, 30, 30, 0) 186.02%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
+	opacity: 0.7;
+	position: absolute;
+	top: 8rem;
+	left: 8rem;
+	z-index: 0;
+}
+
+.home>.left>.content {
+	position: relative;
+	color: white;
+	z-index: 2;
+	margin-top: 2rem;
+}
+
+.home>.left>.content>.mainHeading {
+	font-family: 'Anton';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 6rem;
+}
+
+.home>.left>.content>.mainHeading>.year {
+	color: #F34D65;
+}
+
+.home>.left>.content>.subcontent {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+}
+
+.home>.left>.content>.subcontent>.sub1 {
+	font-family: 'Arimo';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 3rem;
+}
+
+.home>.left>.content>.subcontent>.sub2 {
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 600;
+	font-size: 1.2rem;
+}
+
+.home>.left>.content>.registerbtn {
+	margin-top: 2rem;
+	background: linear-gradient(89.88deg, #F34C65 0.08%, #EA846A 99.9%);
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	padding: 1rem 4rem;
+	color: white;
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 600;
+}
+
+.home>.right {
+	position: relative;
+	z-index: 2;
+	margin-top: 2rem;
+}
+
