@@ -1,25 +1,45 @@
 import React from "react";
 import "./messageCard.css";
-// import { Zoom } from "react-reveal";
 
 function MessageCard({ data }) {
-	return (
-		<div className="messageCard">
-			<div className="msgImg">
-				{/* <Zoom> */}
-				<img src={data.imageUrl} alt="" />
-				{/* </Zoom> */}
-			</div>
-			<div className="messageDetail">
-				{/* <Zoom> */}
-				<div className="message">{data.message}</div>
-				<div className="identity">
-					-{data.name},{data.designation}
+	if(data.place===1)
+	{
+		return (
+			<div className="messageCard">
+				<div className="msgImg">
+					<img src={data.imageUrl} alt="" />
 				</div>
-				{/* </Zoom> */}
-			</div>
-		</div>
-	);
+				<div className="messageDetail">
+					<div className="identity">
+						{data.name}
+					</div>
+					<div className="designationHeading">
+						{data.designation}
+					</div>
+					<div className="message">{data.message}</div>
+				</div>
+			</div>	
+		);
+	}
+	else{
+		return (
+			<div className="messageCard">
+				<div className="messageDetail">
+					<div className="identity">
+						{data.name}
+					</div>
+					<div className="designationHeading">
+						{data.designation}
+					</div>
+					<div className="message">{data.message}</div>
+				</div>
+				<div className="msgImg">
+					<img src={data.imageUrl} alt="" />
+				</div>
+			</div>	
+		);
+	}
+	
 }
 
 export default MessageCard;
