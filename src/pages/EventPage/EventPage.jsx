@@ -37,7 +37,7 @@ function EventPage() {
       <div className="buttondiv">
         <button
           className="button"
-          onClick={
+          onClick={ 
             location.state.data.registration_is_live == true
               ? console.log("registration is open")
               : handleChange

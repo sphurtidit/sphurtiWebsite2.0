@@ -2,7 +2,7 @@
 	content: "";
 	position: fixed;
 	z-index: -1;
-	background: url("../../assets/rectangle26.png");
+	background-color: black;
 	background-size: cover;
 	background-position: center;
 	height: 100vh;

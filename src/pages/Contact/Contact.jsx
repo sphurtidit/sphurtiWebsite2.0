@@ -9,21 +9,24 @@ import { Link } from "react-router-dom";
 
 function Contact() {
 	return (
-		<div
-			className="ContactPage"
-			style={{
-				width: "100%",
-				position: "relative",
-				padding: "2rem 1.5rem 3rem 1.5rem",
-				display: "flex",
-				justifyContent: "center",
-				alignItems: "center",
-				flexDirection: "column",
-			}}
-		>
-			<Circles />
-			<Contactwrapper />
-      <div className="socials">
+    <div
+      className="ContactPage"
+      style={{
+        width: "100%",
+        position: "relative",
+        padding: "2rem 1.5rem 3rem 1.5rem",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        flexDirection: "column",
+      }}
+    >
+      <div>
+        <p className="Ourteam">OUR TEAM</p>
+      </div>
+
+      <Contactwrapper />
+      {/* <div className="socials">
         <Link to="">
           <img src={fb} className="icons" alt="img not available"></img>
         </Link>
@@ -36,9 +39,9 @@ function Contact() {
         <Link to="">
           <img src={yt} className="icons" alt="img not available"></img>
         </Link>
-      </div>
-		</div>
-	);
+      </div> */}
+    </div>
+  );
 }
 
 export default Contact;
