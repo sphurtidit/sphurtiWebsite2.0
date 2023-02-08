@@ -23,7 +23,7 @@ function Guidelines() {
 		<div className="Guidlinespage">
 			{loading && <h1>Loading...</h1>}
 			{!loading && <h1>General Guidelines</h1>}
-			<Circles />
+			
 			<ul>
 				{data &&
 					data.map((item, id) => {
