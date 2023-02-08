@@ -33,7 +33,7 @@ const Contactwrapper = () => {
 		<>
 			{loading && <h1>Loading...</h1>}
 			{!loading && (
-				<h1
+				<h2
 					style={{
 						color: "white",
 						textAlign: "center",
@@ -41,13 +41,13 @@ const Contactwrapper = () => {
 					}}
 				>
 					Faculty contact
-				</h1>
+				</h2>
 			)}
 			<div className="div4">
 				{data && data.map((item, id) => <Contactcard data={item} key={id} />)}
 			</div>
 			{!loading && (
-				<h1
+				<h2
 					style={{
 						color: "white",
 						textAlign: "center",
@@ -55,7 +55,7 @@ const Contactwrapper = () => {
 					}}
 				>
 					Student contact
-				</h1>
+				</h2>
 			)}
 			<div className="div5">
 				{state &&
