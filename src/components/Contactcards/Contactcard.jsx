@@ -1,9 +1,20 @@
 import "./Contactcard.css";
+import back from "../../assets/back.png";
+
 
 const Contactcard = ({ data }) => {
+  
 	return (
     <div className="cardcontainer">
-      <img src={data.imageUrl} alt="not available"></img>
+      <div>
+        <img
+          src={back}
+          className="contactcard1"
+          alt="not available"
+          style={{ backgroundImage: `url(${data.imageUrl})` }}
+        ></img>
+      </div>
+
       <div>
         <p className="name">{data.name}</p>
         <p className="designation">{data.designation}</p>

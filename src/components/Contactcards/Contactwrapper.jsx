@@ -8,7 +8,7 @@ import Studentcontact from "./Studentcontact";
 const Contactwrapper = () => {
 	const [data, setData] = useState([]);
 	const [state, setState] = useState([]);
-	const [loading, setLoading] = useState(true);
+	const [loading, setLoading] = useState(false);
 	useEffect(() => {
 		const unsub = onSnapshot(doc(db, "contact", "faculty_contact"), (doc) => {
 			setData(doc.data().faculty_contact);
