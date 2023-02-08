@@ -1,13 +1,17 @@
 .footer {
 	width: 100vw;
 	display: flex;
-	background-color: #111111;
+	background-color: black;
 	justify-content: space-between;
 	align-items: center;
 	flex-wrap: wrap;
 	padding: 1rem;
 	padding-bottom: 1.5rem;
 	z-index: 2;
+	border: 2px solid white;
+	border-left: none;
+	border-right: none;
+	border-bottom: none;
 }
 
 .footer > img {
