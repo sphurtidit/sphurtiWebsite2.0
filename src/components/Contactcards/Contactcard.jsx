@@ -6,7 +6,7 @@ const Contactcard = ({ data }) => {
       <img src={data.imageUrl} alt="not available"></img>
       <div>
         <p className="name">{data.name}</p>
-        <p className="name">{data.designation}</p>
+        <p className="designation">{data.designation}</p>
         <p className="number">{data.phone}</p>
       </div>
     </div>
