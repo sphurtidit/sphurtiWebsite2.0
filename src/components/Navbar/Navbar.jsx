@@ -25,34 +25,40 @@ function Navbar() {
 				</div>
 				<div className="navCenter">
 					<Link to="/" className={`${pathname === "/" ? "active" : ""}`}>
-						Home
+						HOME
 					</Link>
 					<Link
 						to="/sports"
 						className={`${pathname === "/sports" ? "active" : ""}`}
 					>
-						Sports
+						SPORTS
 					</Link>
 					<Link
 						to="/live"
 						className={`${pathname === "/live" ? "active" : ""}`}
 					>
-						Live Results
+						LIVE RESULTS
 					</Link>
 					<Link
 						to="/guidelines"
 						className={`${pathname === "/guidelines" ? "active" : ""}`}
 					>
-						Guidelines
+						GUIDELINES
 					</Link>
 					<Link
 						to="/contact"
 						className={`${pathname === "/contact" ? "active" : ""}`}
 					>
-						Contact Us
+						CONTACT
 					</Link>
 				</div>
 				<div className="navRight">
+					<Link
+						to="/"
+						// className={`${pathname === "/" ? "active" : ""}`}
+					>
+						REGISTER
+					</Link>
 					<img
 						onClick={() => setNavOpen("navMenuOpenshow")}
 						src={navMenu}
@@ -74,35 +80,42 @@ function Navbar() {
 						className={`${pathname === "/" ? "active" : ""}`}
 						onClick={() => setNavOpen("")}
 					>
-						Home
+						HOME
 					</Link>
 					<Link
 						to="/sports"
 						className={`${pathname === "/sports" ? "active" : ""}`}
 						onClick={() => setNavOpen("")}
 					>
-						Sports
+						SPORTS
 					</Link>
 					<Link
 						to="/live"
 						className={`${pathname === "/live" ? "active" : ""}`}
 						onClick={() => setNavOpen("")}
 					>
-						Live Results
+						LIVE RESULTS
 					</Link>
 					<Link
 						to="/guidelines"
 						className={`${pathname === "/guidelines" ? "active" : ""}`}
 						onClick={() => setNavOpen("")}
 					>
-						Guidelines
+						GUIDELINES
 					</Link>
 					<Link
 						to="/contact"
 						className={`${pathname === "/contact" ? "active" : ""}`}
 						onClick={() => setNavOpen("")}
 					>
-						Contact Us
+						CONTACT
+					</Link>
+					<Link
+						to="/"
+						className={`register ${pathname === "/register" ? "active" : ""}`}
+						onClick={() => setNavOpen("")}
+					>
+						REGISTER
 					</Link>
 				</div>
 			</div>
