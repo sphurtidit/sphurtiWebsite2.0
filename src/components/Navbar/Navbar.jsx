@@ -112,7 +112,7 @@ function Navbar() {
 					</Link>
 					<Link
 						to="/"
-						className={`register ${pathname === "/register" ? "active" : ""}`}
+						className={`register`}
 						onClick={() => setNavOpen("")}
 					>
 						REGISTER
