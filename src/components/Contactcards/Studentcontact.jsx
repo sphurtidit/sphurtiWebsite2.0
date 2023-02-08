@@ -1,15 +1,21 @@
 import "./Contactcard.css";
+import back from "../../assets/back.png";
 
 const Studentcontact = ({ data }) => {
-	return (
-		<div className="cardcontainer">
-			<img src={data.imageUrl} alt="not available"></img>
-			<div className="div2">
-				<p className="name">{data.name}</p>
-				<p className="number">{data.phone}</p>
-			</div>
-		</div>
-	);
+  return (
+    <div className="cardcontainer">
+      <img
+        src={back}
+        className="contactcard1"
+        alt="not available"
+        style={{ backgroundImage: `url(${data.imageUrl})`  }}
+      ></img>
+      <div className="div2">
+        <p className="name">{data.name}</p>
+        <p className="number">{data.phone}</p>
+      </div>
+    </div>
+  );
 };
 
 export default Studentcontact;

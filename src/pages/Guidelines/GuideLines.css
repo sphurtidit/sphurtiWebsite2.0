@@ -13,7 +13,7 @@
 	content: "";
 	position: fixed;
 	z-index: -1;
-	background: url("../../assets/rectangle26.png");
+	background-color: black;
 	background-size: cover;
 	background-position: center;
 	height: 100vh;
@@ -29,4 +29,7 @@
 .Guidlinespage h1 {
 	border-bottom: 1px solid black;
 	margin-bottom: 1rem;
+}
+.general{
+	color:#F34E66;
 }
