@@ -64,29 +64,40 @@ function Home() {
 			<div className="theGame">
 				THE GAME
 			</div>
-			<div className="left">
-				<div className="content">
-					<div className="mainHeading">
-						<span>SPHURTI </span>
-						<span className="year">2023</span>
-					</div>
-					<div className="subcontent">
-						<div className="sub1">
-							Unleash Your Potential,<br /> Embrace the Game
+			<div className="mainhome">
+				<div className="left">
+					<div className="content">
+						<div className="mainHeading">
+							<span>SPHURTI </span>
+							<span className="year">2023</span>
 						</div>
-						<div className="sub2">
-							Lorem ipsum dolor amet sit Lorem ipsum dolor amet <br /> sit Lorem ipsum dolor amet sit Lorem ipsum dolor <br /> amet sit
+						<div className="subcontent">
+							<div className="sub1">
+								Unleash Your Potential,<br /> Embrace the Game
+							</div>
+							<div className="sub2">
+								Lorem ipsum dolor amet sit Lorem ipsum dolor amet <br /> sit Lorem ipsum dolor amet sit Lorem ipsum dolor <br /> amet sit
+							</div>
 						</div>
+						<button className="registerbtn">
+							REGISTER
+						</button>
 					</div>
-					<button className="registerbtn">
-						REGISTER
-					</button>
+				</div>
+				<div className="right">
+					<img src={player} alt="" />
 				</div>
 			</div>
-			<div className="right">
-				<img src={player} alt="" />
+			<div className="messages">
+				<div className="msgHeading">
+					MESSAGES
+				</div>
+				{loading && <h1>Loading...</h1>}
+				{data &&
+					data.map((item, id) => {
+						return <MessageCard data={item} key={id} />;
+					})}
 			</div>
-
 		</div>
 	);
 }
