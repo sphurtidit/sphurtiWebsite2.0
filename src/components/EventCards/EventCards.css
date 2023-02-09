@@ -13,7 +13,8 @@
 .cardcontainer {
 	
 	
-	background: transparent;
+	background-color: black;
+	border-color: black;
 	overflow: hidden;
 	
 	display: flex;
@@ -36,7 +37,7 @@
 	
 	background-size: 13rem;
 	color: transparent;
-	border-radius: 12px;
+	
 	background-repeat: no-repeat;
 	background-position: center;
 }
@@ -46,7 +47,8 @@
 	width: 100%;
 	justify-content: center;
 	align-items: center;
-	
+	background-color: black;
+	border-color: black;
 	border-radius: 12px;
 	padding: 0.5rem;
 	flex-direction: column;
