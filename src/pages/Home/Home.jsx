@@ -10,7 +10,7 @@ import MessageCard from "../../components/MessageCard/MessageCard";
 // import twitter from "../../assets/twitter-icon.png";
 // import youtube from "../../assets/youtube-icon.png";
 // import { Zoom } from "react-reveal";
-import player from '../../assets/homePlayer.png'
+import player from "../../assets/homePlayer.png";
 
 function Home() {
 	const [data, setData] = useState([]);
@@ -61,10 +61,8 @@ function Home() {
 		// 	</div>
 		// </div>
 		<div className="home">
-			<div className="theGame">
-				THE GAME
-			</div>
-			<div className="mainhome">
+			<div className="theGame">THE GAME</div>
+			<div className="mainhome" id="home">
 				<div className="left">
 					<div className="content">
 						<div className="mainHeading">
@@ -73,25 +71,23 @@ function Home() {
 						</div>
 						<div className="subcontent">
 							<div className="sub1">
-								Unleash Your Potential,<br /> Embrace the Game
+								Unleash Your Potential,
+								<br /> Embrace the Game
 							</div>
 							<div className="sub2">
-								Lorem ipsum dolor amet sit Lorem ipsum dolor amet <br /> sit Lorem ipsum dolor amet sit Lorem ipsum dolor <br /> amet sit
+								Lorem ipsum dolor amet sit Lorem ipsum dolor amet <br /> sit
+								Lorem ipsum dolor amet sit Lorem ipsum dolor <br /> amet sit
 							</div>
 						</div>
-						<button className="registerbtn">
-							REGISTER
-						</button>
+						<button className="registerbtn">REGISTER</button>
 					</div>
 				</div>
 				<div className="right">
 					<img src={player} alt="" />
 				</div>
 			</div>
-			<div className="messages">
-				<div className="msgHeading">
-					MESSAGES
-				</div>
+			<div className="messages" id="about">
+				<div className="msgHeading">MESSAGES</div>
 				{loading && <h1>Loading...</h1>}
 				{data &&
 					data.map((item, id) => {

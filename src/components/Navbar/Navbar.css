@@ -3,13 +3,13 @@
 	justify-content: space-between;
 	align-items: center;
 	height: 5rem;
-	position: fixed;
+	position: sticky;
 	top: 0;
 	width: 100vw;
 	z-index: 1000;
 	background-color: black;
 	padding: 0 4rem;
-	font-family: 'Montserrat', sans-serif;
+	font-family: "Montserrat", sans-serif;
 }
 
 .navLeft {
@@ -31,8 +31,8 @@
 }
 
 .navCenter > .active {
-	border-bottom: 2px solid #F74F63;
-	color: #F74F63;
+	border-bottom: 2px solid #f74f63;
+	color: #f74f63;
 }
 
 .navCenter > a {
@@ -42,9 +42,10 @@
 	padding-bottom: 0.3rem;
 	font-size: 1.2rem;
 	text-decoration: none;
+	cursor: pointer;
 }
 
-.navCenter>.register{
+.navCenter > .register {
 	display: none;
 }
 
@@ -56,11 +57,12 @@
 	display: flex;
 }
 
-.navRight>a{
+.navRight > a {
 	text-decoration: none;
-	color:#F74F63;
+	color: #f74f63;
 	font-weight: 600;
 	font-size: 1.1rem;
+	cursor: pointer;
 }
 
 .navRight > img {
@@ -107,8 +109,8 @@
 	gap: 2rem;
 }
 
-.mobileMenu>.register{
-	color: #F74F63;
+.mobileMenu > .register {
+	color: #f74f63;
 	font-weight: 800;
 }
 
@@ -120,15 +122,16 @@
 	width: max-content;
 	border-bottom: 2px solid transparent;
 	text-decoration: none;
+	cursor: pointer;
 }
 
 .mobileMenu > .active {
-	border-bottom: 2px solid #F74F63;
-	color: #F74F63;
+	border-bottom: 2px solid #f74f63;
+	color: #f74f63;
 }
 
 .mobileMenu > a:hover {
-	border-bottom: 2px solid #F74F63;
+	border-bottom: 2px solid #f74f63;
 }
 /*  */
 
@@ -138,11 +141,11 @@
 		padding-right: 1rem;
 	}
 
-	.navRight>img{
+	.navRight > img {
 		display: flex;
 	}
 
-	.navRight>a{
+	.navRight > a {
 		display: none;
 	}
 

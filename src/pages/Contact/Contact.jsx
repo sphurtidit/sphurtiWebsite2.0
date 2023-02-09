@@ -20,6 +20,7 @@ function Contact() {
         alignItems: "center",
         flexDirection: "column",
       }}
+      id="contact"
     >
       <div>
         <p className="Ourteam">OUR TEAM</p>

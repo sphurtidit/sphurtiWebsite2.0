@@ -1,21 +1,17 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import sphurtiLogo from "../../assets/sphurtiLogo.png";
 import navMenu from "../../assets/navMenu.png";
 import closeBtn from "../../assets/closeButton.png";
 import "./Navbar.css";
-import { Link, useLocation } from "react-router-dom";
 
 function Navbar() {
-	const { pathname } = useLocation();
 	const [navOpen, setNavOpen] = useState("");
-
-	const showNavbar = () => {
-		setMenuVisble("visible");
-	};
-
-	const closeMenu = () => {
-		setMenuVisble("");
-	};
+	const [pathname, setpathname] = useState("home");
+	useEffect(() => {
+		setTimeout(() => {
+			setpathname(window.location.href);
+		}, 300);
+	}, [navOpen]);
 
 	return (
 		<>
@@ -24,41 +20,42 @@ function Navbar() {
 					<img src={sphurtiLogo} alt="" />
 				</div>
 				<div className="navCenter">
-					<Link to="/" className={`${pathname === "/" ? "active" : ""}`}>
+					<a
+						className={`${pathname.includes("home") ? "active" : ""}`}
+						href="#home"
+						onClick={() => setNavOpen("abeOoo")}
+					>
 						HOME
-					</Link>
-					<Link
-						to="/sports"
-						className={`${pathname === "/sports" ? "active" : ""}`}
+					</a>
+					<a
+						className={`${pathname.includes("about") ? "active" : ""}`}
+						href="#about"
+						onClick={() => setNavOpen("boy")}
 					>
-						SPORTS
-					</Link>
-					<Link
-						to="/live"
-						className={`${pathname === "/live" ? "active" : ""}`}
-					>
-						LIVE RESULTS
-					</Link>
-					<Link
-						to="/guidelines"
-						className={`${pathname === "/guidelines" ? "active" : ""}`}
-					>
-						GUIDELINES
-					</Link>
-					<Link
-						to="/contact"
-						className={`${pathname === "/contact" ? "active" : ""}`}
+						ABOUT
+					</a>
+					<a
+						className={`${pathname.includes("contact") ? "active" : ""}`}
+						href="#contact"
+						onClick={() => setNavOpen("cat")}
 					>
 						CONTACT
-					</Link>
+					</a>
+					<a
+						className={`${pathname.includes("sports") ? "active" : ""}`}
+						href="#sports"
+						onClick={() => setNavOpen("doctor")}
+					>
+						SPORTS
+					</a>
 				</div>
 				<div className="navRight">
-					<Link
-						to="/"
-						// className={`${pathname === "/" ? "active" : ""}`}
+					<a
+						className={`${pathname.includes("register") ? "active" : ""}`}
+						onClick={() => setNavOpen("www")}
 					>
 						REGISTER
-					</Link>
+					</a>
 					<img
 						onClick={() => setNavOpen("navMenuOpenshow")}
 						src={navMenu}
@@ -75,48 +72,34 @@ function Navbar() {
 					/>
 				</div>
 				<div className="mobileMenu">
-					<Link
-						to="/"
-						className={`${pathname === "/" ? "active" : ""}`}
+					<a
+						className={`${pathname.includes("home") ? "active" : ""}`}
+						href="#home"
 						onClick={() => setNavOpen("")}
 					>
 						HOME
-					</Link>
-					<Link
-						to="/sports"
-						className={`${pathname === "/sports" ? "active" : ""}`}
+					</a>
+					<a
+						className={`${pathname.includes("about") ? "active" : ""}`}
+						href="#about"
 						onClick={() => setNavOpen("")}
 					>
-						SPORTS
-					</Link>
-					<Link
-						to="/live"
-						className={`${pathname === "/live" ? "active" : ""}`}
-						onClick={() => setNavOpen("")}
-					>
-						LIVE RESULTS
-					</Link>
-					<Link
-						to="/guidelines"
-						className={`${pathname === "/guidelines" ? "active" : ""}`}
-						onClick={() => setNavOpen("")}
-					>
-						GUIDELINES
-					</Link>
-					<Link
-						to="/contact"
-						className={`${pathname === "/contact" ? "active" : ""}`}
+						ABOUT
+					</a>
+					<a
+						className={`${pathname.includes("contact") ? "active" : ""}`}
+						href="#contact"
 						onClick={() => setNavOpen("")}
 					>
 						CONTACT
-					</Link>
-					<Link
-						to="/"
-						className={`register`}
+					</a>
+					<a
+						className={`${pathname.includes("sports") ? "active" : ""}`}
+						href="#sports"
 						onClick={() => setNavOpen("")}
 					>
-						REGISTER
-					</Link>
+						SPORTS
+					</a>
 				</div>
 			</div>
 		</>
