@@ -1,4 +1,4 @@
-.footer {
+.footer > .footerimages{
 	width: 100vw;
 	display: flex;
 	background-color: black;
@@ -16,6 +16,19 @@
 
 .footer > img {
 	height: 6.5rem;
+}
+
+.footer > .developers{
+	color: white;
+	text-align: center;
+	padding-bottom: 1rem;
+}
+
+.footer > .developers>span{
+	font-family: 'Montserrat';
+	color: #F34D65;
+	font-weight: 600;
+	cursor: pointer;
 }
 
 @media only screen and (max-width: 500px) {

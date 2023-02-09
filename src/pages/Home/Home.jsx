@@ -11,9 +11,12 @@ import MessageCard from "../../components/MessageCard/MessageCard";
 // import youtube from "../../assets/youtube-icon.png";
 // import { Zoom } from "react-reveal";
 import player from "../../assets/homePlayer.png";
+import toast, { Toaster } from 'react-hot-toast';
 
 function Home() {
 	const [data, setData] = useState([]);
+	const [isLive,setIsLive]=useState("");
+	const [link,setLink]=useState("")
 	const [loading, setLoading] = useState(true);
 
 	useEffect(() => {
@@ -26,6 +29,36 @@ function Home() {
 			unsub;
 		};
 	}, []);
+
+	useEffect(()=>{
+		const unsub = onSnapshot(doc(db, "contact", "home"), (doc) => {
+			setIsLive(doc.data().isLive);
+		});
+	
+		return () => {
+			unsub;
+		};
+	},[])
+
+	useEffect(()=>{
+		const unsub = onSnapshot(doc(db, "contact", "home"), (doc) => {
+			setLink(doc.data().link);
+		});
+	
+		return () => {
+			unsub;
+		};
+	},[])
+
+	const handleRegisterbtn=()=>{
+		if(isLive)
+		{
+			window.open(link,"_blank")
+		}
+		else{
+			toast.error('registrations not opened yet!!');
+		}
+	}
 
 	return (
 		// <div className="home">
@@ -61,6 +94,7 @@ function Home() {
 		// 	</div>
 		// </div>
 		<div className="home">
+			<Toaster />
 			<div className="theGame">THE GAME</div>
 			<div className="mainhome" id="home">
 				<div className="left">
@@ -79,7 +113,11 @@ function Home() {
 								Lorem ipsum dolor amet sit Lorem ipsum dolor <br /> amet sit
 							</div>
 						</div>
-						<button className="registerbtn">REGISTER</button>
+						<button className="registerbtn"
+						onClick={()=>handleRegisterbtn()}
+						>
+							REGISTER
+						</button>
 					</div>
 				</div>
 				<div className="right">

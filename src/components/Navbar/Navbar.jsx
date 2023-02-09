@@ -2,16 +2,52 @@ import React, { useEffect, useState } from "react";
 import sphurtiLogo from "../../assets/sphurtiLogo.png";
 import navMenu from "../../assets/navMenu.png";
 import closeBtn from "../../assets/closeButton.png";
+import { doc, onSnapshot } from "firebase/firestore";
+import { db } from "../../Firebase";
+import toast, { Toaster } from 'react-hot-toast';
 import "./Navbar.css";
 
 function Navbar() {
 	const [navOpen, setNavOpen] = useState("");
 	const [pathname, setpathname] = useState("home");
+	const [isLive,setIsLive]=useState("");
+	const [link,setLink]=useState("")
 	useEffect(() => {
 		setTimeout(() => {
 			setpathname(window.location.href);
 		}, 300);
 	}, [navOpen]);
+
+	useEffect(()=>{
+		const unsub = onSnapshot(doc(db, "contact", "home"), (doc) => {
+			setIsLive(doc.data().isLive);
+		});
+	
+		return () => {
+			unsub;
+		};
+	},[])
+
+	useEffect(()=>{
+		const unsub = onSnapshot(doc(db, "contact", "home"), (doc) => {
+			setLink(doc.data().link);
+		});
+	
+		return () => {
+			unsub;
+		};
+	},[])
+
+	const handleRegisterbtn=()=>{
+		if(isLive)
+		{
+			// window.location.href=link;
+			window.open(link,"_blank")
+		}
+		else{
+			toast.error('registrations not opened yet!!');
+		}
+	}
 
 	return (
 		<>
@@ -35,24 +71,31 @@ function Navbar() {
 						ABOUT
 					</a>
 					<a
-						className={`${pathname.includes("contact") ? "active" : ""}`}
-						href="#contact"
-						onClick={() => setNavOpen("cat")}
-					>
-						CONTACT
-					</a>
-					<a
 						className={`${pathname.includes("sports") ? "active" : ""}`}
 						href="#sports"
 						onClick={() => setNavOpen("doctor")}
 					>
 						SPORTS
 					</a>
+					<a
+						className={`${pathname.includes("live") ? "active" : ""}`}
+						href="#live"
+						onClick={() => setNavOpen("kuchbhi")}
+					>
+						LIVE RESULTS
+					</a>
+					<a
+						className={`${pathname.includes("contact") ? "active" : ""}`}
+						href="#contact"
+						onClick={() => setNavOpen("cat")}
+					>
+						CONTACT
+					</a>
 				</div>
 				<div className="navRight">
 					<a
 						className={`${pathname.includes("register") ? "active" : ""}`}
-						onClick={() => setNavOpen("www")}
+						onClick={() => handleRegisterbtn()}
 					>
 						REGISTER
 					</a>
@@ -87,18 +130,18 @@ function Navbar() {
 						ABOUT
 					</a>
 					<a
-						className={`${pathname.includes("contact") ? "active" : ""}`}
-						href="#contact"
-						onClick={() => setNavOpen("")}
-					>
-						CONTACT
-					</a>
-					<a
 						className={`${pathname.includes("sports") ? "active" : ""}`}
 						href="#sports"
 						onClick={() => setNavOpen("")}
 					>
 						SPORTS
+					</a>
+					<a
+						className={`${pathname.includes("contact") ? "active" : ""}`}
+						href="#contact"
+						onClick={() => setNavOpen("")}
+					>
+						CONTACT
 					</a>
 				</div>
 			</div>

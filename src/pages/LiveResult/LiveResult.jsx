@@ -3,9 +3,9 @@ import Circles from "../../components/Circles/Circles";
 
 function LiveResult() {
 	return (
-		<div className="LiveResultsPage">
+		<div className="LiveResultsPage" id="live">
 			
-			<h1>Awaiting Designs...</h1>
+			<h1>Some Exciting freatures to come...</h1>
 		</div>
 	);
 }
