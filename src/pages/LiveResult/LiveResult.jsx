@@ -21,10 +21,10 @@ const LiveResult = () => {
       setLoading(false);
     });
 
-    return () => {
-      unsub;
-    };
-  }, []);
+		return () => {
+			unsub;
+		};
+	}, []);
 	return (
     <div className="LiveResultsPage">
       <h1 className="liveresults">Live Results</h1>

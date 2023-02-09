@@ -15,8 +15,8 @@ function App() {
       <Navbar />
       <Home />
       <Sports />
-      <ContactUs />
       <LiveResult />
+      <ContactUs />
       <Footer />
     </>
   );

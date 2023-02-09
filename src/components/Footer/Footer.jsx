@@ -8,9 +8,12 @@ import imgcenter from "../../assets/footer-logo-center.png";
 function Footer() {
 	return (
 		<div className="footer">
-			<img src={imgleft} alt="" />
-			<img src={imgcenter} alt="" />
-			<img src={imgright} alt="" />
+			<div className="footerimages">
+				<img src={imgleft} alt="" />
+				<img src={imgcenter} alt="" />
+				<img src={imgright} alt="" />
+			</div>
+			<div className="developers">Made by Team <span>ByteBuilders</span> </div>
 		</div>
 	);
 }
