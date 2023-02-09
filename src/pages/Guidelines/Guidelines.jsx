@@ -28,7 +28,7 @@ function Guidelines() {
 				{data &&
 					data.map((item, id) => {
 						return <li key={id}>{item}</li>;
-					})}
+				})}
 			</ul>
 		</div>
 	);
