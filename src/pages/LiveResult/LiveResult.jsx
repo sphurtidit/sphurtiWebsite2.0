@@ -26,7 +26,7 @@ const LiveResult = () => {
 		};
 	}, []);
 	return (
-    <div className="LiveResultsPage">
+    <div className="LiveResultsPage" id="live">
       <h1 className="liveresults">Live Results</h1>
       <div className="mainbadminton">
         <p className="heading">Badminton</p>
