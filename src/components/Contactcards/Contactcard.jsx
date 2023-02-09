@@ -1,5 +1,5 @@
 import "./Contactcard.css";
-import back from "../../assets/back1.png";
+import back from "../../assets/back3.webp";
 
 
 const Contactcard = ({ data }) => {
