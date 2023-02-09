@@ -1,14 +1,17 @@
-.LiveResultsPage {
+.liveresults {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	
-	min-height: 100vh;
 	width: 100%;
 	color: white;
+	margin-bottom: 2rem;
+	font-family: 'Anton', sans-serif;
+	font-size: 3rem;
+	font-weight: 600;
+		
 }
 
-.LiveResultsPage::before {
+/* .LiveResultsPage::before {
 	content: "";
 	position: fixed;
 	z-index: -1;
@@ -19,9 +22,72 @@
 	width: 100vw;
 	top: 0;
 	left: 0;
+} */
+
+.heading{
+	display: flex;
+		flex-direction: column;
+		align-items:flex-start;
+		width: 100%;
+		color:#f34e66;
+		font-size: 1.6rem;
+		margin-top: 1.5rem;
+		margin-bottom: 1.5rem;
+		margin-left: 1rem;
+		font-family: 'Anton', sans-serif;
+
 }
-
-.cricketdiv{
-	
-
+.badmintondiv{
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	height: auto;
+}
+.basketballdiv {
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	height: auto;
+}
+.cricketdiv {
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	height: auto;
+}
+.footballdiv {
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	height: auto;
+}
+.tabletennisdiv {
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	height: auto;
+}
+.vollyballdiv {
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	height: auto;
+}
+.images{
+	display: flex;
+	align-items: center;
+	width: 30%;
+	margin: 1rem;
+}
+.mainbasketball{
+	display: none;
+}
+.mainfootball{
+	display: none;
+}
+.maintabletennis{
+	display: none;
+}
+.mainvollyball{
+	display: none;
 }
