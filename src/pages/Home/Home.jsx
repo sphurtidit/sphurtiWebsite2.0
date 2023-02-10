@@ -61,38 +61,6 @@ function Home() {
 	}
 
 	return (
-		// <div className="home">
-		// 	<div className="mainTitle">
-		// 		{/* <Zoom> */}
-		// 		<p>
-		// 			SPHURTI <br></br>2023
-		// 		</p>
-		// 		{/* </Zoom> */}
-		// 	</div>
-		// 	<div className="socials">
-		// 		{/* <Zoom> */}
-		// 		<div>
-		// 			<img src={facebook} alt="" />
-		// 		</div>
-		// 		<div>
-		// 			<img src={insta} alt="" />
-		// 		</div>
-		// 		<div>
-		// 			<img src={twitter} alt="" />
-		// 		</div>
-		// 		<div>
-		// 			<img src={youtube} alt="" />
-		// 		</div>
-		// 		{/* </Zoom> */}
-		// 	</div>
-		// 	<div className="messages">
-		// 		{loading && <h1>Loading...</h1>}
-		// 		{data &&
-		// 			data.map((item, id) => {
-		// 				return <MessageCard data={item} key={id} />;
-		// 			})}
-		// 	</div>
-		// </div>
 		<div className="home">
 			<Toaster />
 			<div className="theGame">THE GAME</div>
