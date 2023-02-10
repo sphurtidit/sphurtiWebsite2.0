@@ -137,6 +137,13 @@ function Navbar() {
 						SPORTS
 					</a>
 					<a
+						className={`${pathname.includes("live") ? "active" : ""}`}
+						href="#live"
+						onClick={() => setNavOpen("")}
+					>
+						LIVE RESULT
+					</a>
+					<a
 						className={`${pathname.includes("contact") ? "active" : ""}`}
 						href="#contact"
 						onClick={() => setNavOpen("")}

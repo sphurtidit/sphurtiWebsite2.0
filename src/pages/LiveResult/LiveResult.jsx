@@ -19,7 +19,6 @@ const LiveResult = () => {
 			setData4(doc.data().tabletennis);
 			setData5(doc.data().vollyball);
 			setLoading(false);
-			console.log(data2)
 		});
 
 		return () => {

@@ -96,3 +96,122 @@
 	font-size: 4rem;
 	margin: 7rem 0;
 }
+
+@media only screen and (max-width:1240px) {
+	.home>.theGame {
+		font-size: 12rem;
+		top: 9rem;
+		left: 3rem;
+	}
+
+	.home>.mainhome {
+		justify-content: space-between;
+	}
+
+	.home>.mainhome>.right>img {
+		width: 27rem;
+	}
+
+	.home>.mainhome>.left>.content>.mainHeading {
+		font-size: 6rem;
+	}
+
+	.home>.mainhome>.left>.content>.subcontent>.sub1 {
+		font-size: 3rem;
+	}
+
+	.home>.mainhome>.left>.content>.subcontent>.sub2 {
+		font-size: 1.2rem;
+	}
+
+	@media only screen and (max-width:1150px) {
+		.home>.theGame {
+			font-size: 10rem;
+			top: 12rem;
+			left: 3rem;
+		}
+
+		.home>.mainhome {
+			justify-content: space-between;
+		}
+
+		.home>.mainhome>.right>img {
+			width: 23rem;
+		}
+
+		.home>.mainhome>.left>.content>.mainHeading {
+			font-size: 5rem;
+		}
+
+		.home>.mainhome>.left>.content>.subcontent>.sub1 {
+			font-size: 2rem;
+		}
+
+		.home>.mainhome>.left>.content>.subcontent>.sub2 {
+			font-size: 1rem;
+		}
+	}
+	@media only screen and (max-width:1000px) {
+		.home{
+			padding: 0 2rem;
+		}
+		.home>.mainhome{
+			flex-direction: column-reverse;
+			justify-content: center;
+			align-items: center;
+		}
+		.home>.theGame {
+			display: none;
+		}
+
+		.home>.mainhome>.right>img {
+			width: 18rem;
+		}
+		.home>.mainhome>.left>.content{
+			align-items: center;
+			justify-content: center;
+		}
+		.home>.mainhome>.left>.content>.mainHeading {
+			font-size: 4rem;
+		}
+
+		.home>.mainhome>.left>.content>.subcontent>.sub1 {
+			font-size: 1.9rem;
+		}
+
+		.home>.mainhome>.left>.content>.subcontent>.sub2 {
+			font-size: 1rem;
+		}
+
+		.home>.mainhome>.right{
+			margin-top: 1rem;
+		}
+
+	}
+	@media only screen and (max-width:620px){
+		.home{
+			padding: 0 2rem;
+		}
+		.home>.mainhome>.left>.content>.mainHeading {
+			font-size: 3rem;
+			/* text-align: start; */
+		}
+
+		.home>.mainhome>.left>.content>.subcontent>.sub1 {
+			font-size: 1.5rem;
+			/* text-align: start; */
+		}
+
+		.home>.mainhome>.left>.content>.subcontent>.sub2 {
+			font-size: 0.8rem;
+			/* text-align: start; */
+		}
+		.home>.mainhome>.left>.content{
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: start;
+		}
+	}
+
+}

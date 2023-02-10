@@ -135,7 +135,7 @@
 }
 /*  */
 
-@media only screen and (max-width: 870px) {
+@media only screen and (max-width: 1040px) {
 	.navRight {
 		/* display: flex; */
 		padding-right: 1rem;
