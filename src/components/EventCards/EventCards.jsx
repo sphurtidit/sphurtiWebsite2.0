@@ -1,6 +1,7 @@
 import "./EventCards.css";
 import { Modal } from "@mantine/core";
 import { useState } from "react";
+import close from "../../assets/closeButton.png";
 import back from "../../assets/back3.webp";
 
 const EventCards = ({ data }) => {
@@ -15,6 +16,12 @@ const EventCards = ({ data }) => {
 				overlayBlur="10"
 				withCloseButton={false}
 			>
+				<img
+					src={close}
+					alt="close"
+					className="modalCloseButton"
+					onClick={() => setModal(false)}
+				/>
 				<div className="modalTitle">{data.name}</div>
 				<div className="modalbody">
 					<div className="modalDetails">
