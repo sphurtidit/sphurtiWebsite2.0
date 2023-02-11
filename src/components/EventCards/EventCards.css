@@ -7,12 +7,9 @@
 	row-gap: 2rem;
 	width: 100%;
 	max-width: 974px;
-	min-height: 100vh;
 }
 
 .cardcontainer {
-	
-	
 	background: transparent;
 	overflow: hidden;
 	display: flex;
@@ -31,23 +28,23 @@
 	width: 13rem;
 	background-size: 13rem;
 	color: transparent;
-	
+
 	background-repeat: no-repeat;
 	background-position: center;
 }
 
-.cardcontainer>div {
+.cardcontainer > div {
 	display: flex;
 	width: 100%;
 	justify-content: center;
 	align-items: center;
-	
+
 	border-radius: 12px;
 	padding: 0.5rem;
 	flex-direction: column;
 }
 
-.cardcontainer>a:nth-child(2) {
+.cardcontainer > a:nth-child(2) {
 	display: flex;
 	width: 100%;
 	justify-content: center;
@@ -58,12 +55,12 @@
 	text-decoration: none;
 }
 
-.cardcontainer a>div {
+.cardcontainer a > div {
 	text-decoration: none;
 	font-weight: 500;
 }
 
-.cardcontainer>div>a {
+.cardcontainer > div > a {
 	text-decoration: none;
 	color: white;
 	font-weight: 500;
@@ -74,26 +71,25 @@
 	color: white;
 	font-weight: 400;
 	font-size: 1.7rem;
-	font-family: 'Anton', sans-serif;
+	font-family: "Anton", sans-serif;
 }
-.designation{
-    text-decoration: none;
+.designation {
+	text-decoration: none;
 	color: white;
 	font-weight: 400;
-	font-family: 'Anton', sans-serif;
+	font-family: "Anton", sans-serif;
 	margin-bottom: 0.2rem;
 	margin-top: 0.2rem;
 }
-.number{
+.number {
 	text-decoration: none;
-	color:#F34E66;
+	color: #f34e66;
 	font-weight: 700;
 	font-size: 1.3rem;
-
 }
-.Ourteam{
+.Ourteam {
 	color: white;
-	font-family: 'Anton', sans-serif;
+	font-family: "Anton", sans-serif;
 	font-size: 3.3rem;
 	font-weight: 600;
 	margin-bottom: 2rem;
@@ -119,4 +115,111 @@
 	row-gap: 2rem;
 	width: 100%;
 	max-width: 1085px;
+}
+.mantine-Modal-modal {
+	background-color: black;
+	border: 1px solid white;
+	border-radius: 15px;
+}
+
+.modalbody {
+	color: white;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	flex-direction: column;
+	gap: 1.5rem;
+	font-size: 1.2rem;
+}
+
+.modalTitle {
+	color: #f74f63;
+	font-size: 1.5rem;
+	font-weight: 600;
+	text-transform: uppercase;
+	align-self: center;
+	position: sticky;
+	top: -5px;
+	left: 0;
+	background: black;
+	width: 100%;
+	padding: 0.5rem;
+	text-align: center;
+}
+
+.modalDetails {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-start;
+	gap: 0.5rem;
+}
+
+.modalDetails div {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	gap: 1rem;
+}
+
+.modalDetails div p:nth-child(1) {
+	font-size: 1.2rem;
+	font-weight: 600;
+}
+
+.rules {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-start;
+	gap: 0.5rem;
+}
+
+.rules p {
+	font-weight: 500;
+}
+
+.modalRules {
+	padding-left: 1rem;
+}
+
+.modalShedule {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 0.5rem;
+}
+
+.modalShedule p {
+	align-self: flex-start;
+	font-weight: 500;
+}
+
+.modalShedule img {
+	width: 100%;
+}
+
+.coordinator {
+	display: flex;
+	gap: 0.5rem;
+}
+
+.coordinators p:nth-child(1) {
+	font-weight: 600;
+}
+
+.coordinator p:nth-child(1) {
+	font-weight: 600;
+}
+
+.modalbody a {
+	align-self: center;
+	text-decoration: none;
+	color: white;
+	font-weight: 500;
+	background: #f34e66;
+	border-radius: 15px;
+	padding: 0.5rem 1rem;
+	margin-bottom: 2rem;
 }
