@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import "./messageCard.css";
 
 function MessageCard({ data }) {
-	if(data.place===1)
-	{
+	const text = data.message;
+	const [isReadMore, setIsReadMore] = useState(true);
+	const toggleReadMore = () => { setIsReadMore(!isReadMore) };
+	if (data.place === 1) {
 		return (
 			<div className="messageCard">
 				<div className="msgImg">
@@ -16,14 +18,21 @@ function MessageCard({ data }) {
 					<div className="designationHeading">
 						{data.designation}
 					</div>
-					<div className="message">{data.message}</div>
+					<div className="message">{isReadMore ? text.slice(0, 250) : text} {text.length > 150 &&
+						<span onClick={toggleReadMore}>
+							{isReadMore ? '...read more' : ' ...show less'}
+						</span>
+					}</div>
 				</div>
-			</div>	
+			</div>
 		);
 	}
-	else{
+	else {
 		return (
-			<div className="messageCard">
+			<div className="messageCard reverse">
+				<div className="msgImg">
+					<img src={data.imageUrl} alt="" />
+				</div>
 				<div className="messageDetail">
 					<div className="identity">
 						{data.name}
@@ -31,15 +40,16 @@ function MessageCard({ data }) {
 					<div className="designationHeading">
 						{data.designation}
 					</div>
-					<div className="message">{data.message}</div>
+					<div className="message">{isReadMore ? text.slice(0, 250) : text} {text.length > 150 &&
+						<span onClick={toggleReadMore}>
+							{isReadMore ? '...read more' : ' ...show less'}
+						</span>
+					}</div>
 				</div>
-				<div className="msgImg">
-					<img src={data.imageUrl} alt="" />
-				</div>
-			</div>	
+			</div>
 		);
 	}
-	
+
 }
 
 export default MessageCard;

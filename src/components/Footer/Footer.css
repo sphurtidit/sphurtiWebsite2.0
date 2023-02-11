@@ -1,27 +1,28 @@
-.footer > .footerimages{
+.footer{
 	width: 100vw;
-	display: flex;
 	background-color: black;
-	justify-content: space-between;
-	align-items: center;
-	flex-wrap: wrap;
 	padding: 1rem;
-	padding-bottom: 1.5rem;
 	z-index: 2;
 	border: 2px solid white;
 	border-left: none;
 	border-right: none;
 	border-bottom: none;
 }
+.footer > .footerimages{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+}
 
-.footer > img {
+.footer >.footerimages> img {
 	height: 6.5rem;
 }
 
 .footer > .developers{
 	color: white;
 	text-align: center;
-	padding-bottom: 1rem;
+	padding: 1rem 0;
 }
 
 .footer > .developers>span{
@@ -36,7 +37,7 @@
 		/* flex-direction: column; */
 		padding: 0.5rem;
 	}
-	.footer > img {
+	.footer >.footerimages> img {
 		height: 4rem;
 	}
 }

@@ -10,11 +10,11 @@
 .messageCard>.msgImg{
     background-image: url("../../assets/message-frame.png");
     background-repeat: no-repeat;
-    background-size:25rem;
+    background-size:contain;
 }
 
 .messageCard>.msgImg>img {
-    width: 15rem;
+    width: 10rem;
     margin: 5rem;
 }
 
@@ -40,6 +40,15 @@
     font-style: normal;
     font-weight: 600;
     color: #F34E66;
+}
+span{
+    color: #F34E66;
+    font-weight: 900;
+    cursor: pointer;
+}
+.reverse{
+    display: flex;
+    flex-direction: row-reverse;
 }
 
 @media only screen and (max-width:850px) {
