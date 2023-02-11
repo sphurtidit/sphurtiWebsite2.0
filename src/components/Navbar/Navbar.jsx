@@ -6,45 +6,46 @@ import { doc, onSnapshot } from "firebase/firestore";
 import { db } from "../../Firebase";
 import toast, { Toaster } from 'react-hot-toast';
 import "./Navbar.css";
+import * as Scroll from 'react-scroll';
+import { Link } from 'react-scroll'
 
 function Navbar() {
 	const [navOpen, setNavOpen] = useState("");
 	const [pathname, setpathname] = useState("home");
-	const [isLive,setIsLive]=useState("");
-	const [link,setLink]=useState("")
+	const [isLive, setIsLive] = useState("");
+	const [link, setLink] = useState("")
 	useEffect(() => {
 		setTimeout(() => {
 			setpathname(window.location.href);
 		}, 300);
 	}, [navOpen]);
 
-	useEffect(()=>{
+	useEffect(() => {
 		const unsub = onSnapshot(doc(db, "contact", "home"), (doc) => {
 			setIsLive(doc.data().isLive);
 		});
-	
+
 		return () => {
 			unsub;
 		};
-	},[])
+	}, [])
 
-	useEffect(()=>{
+	useEffect(() => {
 		const unsub = onSnapshot(doc(db, "contact", "home"), (doc) => {
 			setLink(doc.data().link);
 		});
-	
+
 		return () => {
 			unsub;
 		};
-	},[])
+	}, [])
 
-	const handleRegisterbtn=()=>{
-		if(isLive)
-		{
+	const handleRegisterbtn = () => {
+		if (isLive) {
 			// window.location.href=link;
-			window.open(link,"_blank")
+			window.open(link, "_blank")
 		}
-		else{
+		else {
 			toast.error('registrations not opened yet!!');
 		}
 	}
@@ -56,28 +57,43 @@ function Navbar() {
 					<img src={sphurtiLogo} alt="" />
 				</div>
 				<div className="navCenter">
-					<a
+					{/* <a
 						className={`${pathname.includes("home") ? "active" : ""}`}
 						href="#home"
 						onClick={() => setNavOpen("abeOoo")}
 					>
 						HOME
-					</a>
-					<a
+					</a> */}
+					<Link activeClass={`${pathname.includes("home") ? "active" : ""}`} to="home" spy={true} smooth={true} offset={-150} duration={1} onClick={() => setNavOpen("abeOoo")}>
+						HOME
+					</Link>
+					<Link activeClass={`${pathname.includes("about") ? "active" : ""}`} to="about" spy={true} smooth={true} offset={-80} duration={1} onClick={() => setNavOpen("boy")}>
+						ABOUT
+					</Link>
+					<Link activeClass={`${pathname.includes("sports") ? "active" : ""}`} to="sports" spy={true} smooth={true} offset={-80} duration={1} onClick={() => setNavOpen("doctor")}>
+						SPORTS
+					</Link>
+					<Link activeClass={`${pathname.includes("live") ? "active" : ""}`} to="live" spy={true} smooth={true} offset={-80} duration={1} onClick={() => setNavOpen("kuchBhi")}>
+						LIVE RESULTS
+					</Link>
+					<Link activeClass={`${pathname.includes("contact") ? "active" : ""}`} to="contact" spy={true} smooth={true} offset={-80} duration={1} onClick={() => setNavOpen("cat")}>
+						CONTACT
+					</Link>
+					{/* <a
 						className={`${pathname.includes("about") ? "active" : ""}`}
 						href="#about"
 						onClick={() => setNavOpen("boy")}
 					>
 						ABOUT
-					</a>
-					<a
+					</a> */}
+					{/* <a
 						className={`${pathname.includes("sports") ? "active" : ""}`}
 						href="#sports"
 						onClick={() => setNavOpen("doctor")}
 					>
 						SPORTS
-					</a>
-					<a
+					</a> */}
+					{/* <a
 						className={`${pathname.includes("live") ? "active" : ""}`}
 						href="#live"
 						onClick={() => setNavOpen("kuchbhi")}
@@ -90,7 +106,7 @@ function Navbar() {
 						onClick={() => setNavOpen("cat")}
 					>
 						CONTACT
-					</a>
+					</a> */}
 				</div>
 				<div className="navRight">
 					<a
@@ -115,7 +131,7 @@ function Navbar() {
 					/>
 				</div>
 				<div className="mobileMenu">
-					<a
+					{/* <a
 						className={`${pathname.includes("home") ? "active" : ""}`}
 						href="#home"
 						onClick={() => setNavOpen("")}
@@ -149,7 +165,22 @@ function Navbar() {
 						onClick={() => setNavOpen("")}
 					>
 						CONTACT
-					</a>
+					</a> */}
+					<Link activeClass={`${pathname.includes("home") ? "active" : ""}`} to="home" spy={true} smooth={true} offset={-150} duration={1} onClick={() => setNavOpen("abeOoo")}>
+						HOME
+					</Link>
+					<Link activeClass={`${pathname.includes("about") ? "active" : ""}`} to="about" spy={true} smooth={true} offset={-60} duration={1} onClick={() => setNavOpen("boy")}>
+						ABOUT
+					</Link>
+					<Link activeClass={`${pathname.includes("sports") ? "active" : ""}`} to="sports" spy={true} smooth={true} offset={-60} duration={1} onClick={() => setNavOpen("doctor")}>
+						SPORTS
+					</Link>
+					<Link activeClass={`${pathname.includes("live") ? "active" : ""}`} to="live" spy={true} smooth={true} offset={-60} duration={1} onClick={() => setNavOpen("kuchBhi")}>
+						LIVE RESULTS
+					</Link>
+					<Link activeClass={`${pathname.includes("contact") ? "active" : ""}`} to="contact" spy={true} smooth={true} offset={-60} duration={1} onClick={() => setNavOpen("cat")}>
+						CONTACT
+					</Link>
 				</div>
 			</div>
 		</>
