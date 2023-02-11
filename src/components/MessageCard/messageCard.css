@@ -4,13 +4,15 @@
     justify-content: start;
     /* padding: 0 5rem; */
     /* margin-bottom: 5rem; */
-    margin: 5rem 0 5rem 3rem;
+    /* margin: 5rem 0 5rem 3rem; */
+    margin-top: 5rem;
 }
 
 .messageCard>.msgImg{
     background-image: url("../../assets/message-frame.png");
     background-repeat: no-repeat;
     background-size:contain;
+    margin:0 2rem;
 }
 
 .messageCard>.msgImg>img {
