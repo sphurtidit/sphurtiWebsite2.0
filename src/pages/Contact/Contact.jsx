@@ -23,7 +23,7 @@ function Contact() {
       id="contact"
     >
       <div>
-        <p className="Ourteam">OUR TEAM</p>
+        <p className="Ourteam">CONTACT</p>
       </div>
 
       <Contactwrapper />
