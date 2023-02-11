@@ -44,6 +44,7 @@
 	flex-direction: row;
 	width: 100%;
 	height: auto;
+	flex-wrap: wrap;
 }
 
 .basketballdiv {
@@ -51,6 +52,7 @@
 	flex-direction: row;
 	width: 100%;
 	height: auto;
+	flex-wrap: wrap;
 }
 
 .cricketdiv {
@@ -58,6 +60,7 @@
 	flex-direction: row;
 	width: 100%;
 	height: auto;
+	flex-wrap: wrap;
 }
 
 .footballdiv {
@@ -65,6 +68,7 @@
 	flex-direction: row;
 	width: 100%;
 	height: auto;
+	flex-wrap: wrap;
 }
 
 .tabletennisdiv {
@@ -72,6 +76,7 @@
 	flex-direction: row;
 	width: 100%;
 	height: auto;
+	flex-wrap: wrap;
 }
 
 .vollyballdiv {
@@ -79,6 +84,7 @@
 	flex-direction: row;
 	width: 100%;
 	height: auto;
+	flex-wrap: wrap;
 }
 
 .images {
