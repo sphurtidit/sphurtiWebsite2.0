@@ -129,12 +129,12 @@
 	align-items: flex-start;
 	flex-direction: column;
 	gap: 1.5rem;
-	font-size: 1rem;
+	font-size: 1.2rem;
 }
 
 .modalTitle {
 	color: #f74f63;
-	font-size: 1.2rem;
+	font-size: 1.5rem;
 	font-weight: 600;
 	text-transform: uppercase;
 	align-self: center;
@@ -163,7 +163,7 @@
 }
 
 .modalDetails div p:nth-child(1) {
-	font-size: 1.1rem;
+	font-size: 1.2rem;
 	font-weight: 600;
 }
 
@@ -210,7 +210,6 @@
 }
 
 .coordinator p:nth-child(1) {
-	font-size: 1rem;
 	font-weight: 600;
 }
 
@@ -219,7 +218,6 @@
 	text-decoration: none;
 	color: white;
 	font-weight: 500;
-	font-size: 1rem;
 	background: #f34e66;
 	border-radius: 15px;
 	padding: 0.5rem 1rem;
