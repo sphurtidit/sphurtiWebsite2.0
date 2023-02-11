@@ -17,7 +17,7 @@ const LiveResult = () => {
 			setData2(doc.data().football);
 			setData3(doc.data().cricket);
 			setData4(doc.data().tabletennis);
-			setData5(doc.data().vollyball);
+			setData5(doc.data().volleyball);
 			setLoading(false);
 		});
 

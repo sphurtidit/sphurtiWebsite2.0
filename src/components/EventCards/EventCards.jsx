@@ -39,9 +39,13 @@ const EventCards = ({ data }) => {
 					<div className="modalShedule">
 						<p>Schedule:</p>
 						{data &&
+							data.schedule &&
 							data.schedule.map((img, id) => {
 								return <img src={img} alt="shedule" key={id} />;
 							})}
+						{(!data.schedule || data.schedule.length === 0) && (
+							<p>Schedule will be updated soon</p>
+						)}
 					</div>
 					<div className="coordinators">
 						<p>Coordinators:</p>
@@ -55,9 +59,14 @@ const EventCards = ({ data }) => {
 								);
 							})}
 					</div>
-					<a href={data.registration_link} target="_black">
-						Register
-					</a>
+					{data.registration_is_live && (
+						<a href={data.registration_link} target="_black">
+							Register
+						</a>
+					)}
+					{!data.registration_is_live && (
+						<p class="modalNotOpen">Registerations not open</p>
+					)}
 				</div>
 			</Modal>
 			<div className="cardcontainer" onClick={() => setModal(true)}>
