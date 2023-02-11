@@ -87,6 +87,10 @@
 	margin-top: 2rem;
 }
 
+.sphurtiText{
+	color: white;
+}
+
 .home>.messages>.msgHeading {
 	color: white;
 	text-align: center;
