@@ -16,7 +16,7 @@ const LiveResult = () => {
 			setData1(doc.data().basketball);
 			setData2(doc.data().football);
 			setData3(doc.data().cricket);
-			setData4(doc.data().tabletennis);
+			setData4(doc.data().table_tennis);
 			setData5(doc.data().volleyball);
 			setLoading(false);
 		});
@@ -28,7 +28,7 @@ const LiveResult = () => {
 	return (
 		<div className="LiveResultsPage" id="live">
 			<h1 className="liveresults">Live Results</h1>
-			{data && (
+			{data && data1.length > 0 && (
 				<div className="mainbadminton">
 					<p className="heading">Badminton</p>
 					<div className="badmintondiv">
@@ -94,18 +94,23 @@ const LiveResult = () => {
 					</div>
 				</div>
 			)}
-			{!data && !data1 && !data2 && !data3 && !data4 && !data5 && (
-				<p
-					style={{
-						color: "grey",
-						textAlign: "center",
-						fontSize: "2rem",
-						margin: "2rem 0",
-					}}
-				>
-					Awaiting results...
-				</p>
-			)}
+			{data.length === 0 &&
+				data1.length === 0 &&
+				data2.length === 0 &&
+				data3.length === 0 &&
+				data4.length === 0 &&
+				data5.length === 0 && (
+					<p
+						style={{
+							color: "grey",
+							textAlign: "center",
+							fontSize: "2rem",
+							margin: "2rem 0",
+						}}
+					>
+						Awaiting results...
+					</p>
+				)}
 		</div>
 	);
 };
