@@ -8,12 +8,16 @@ import toast, { Toaster } from 'react-hot-toast';
 import "./Navbar.css";
 import * as Scroll from 'react-scroll';
 import { Link } from 'react-scroll'
+import { async } from "@firebase/util";
 
 function Navbar() {
 	const [navOpen, setNavOpen] = useState("");
 	const [pathname, setpathname] = useState("home");
 	const [isLive, setIsLive] = useState("");
 	const [link, setLink] = useState("")
+	const [liveStream, setLiveStream] = useState(false);
+	const [streamLink, setStreamLink] = useState("");
+	const [disablebtn, setDisablebtn] = useState(true);
 	useEffect(() => {
 		setTimeout(() => {
 			setpathname(window.location.href);
@@ -23,22 +27,22 @@ function Navbar() {
 	useEffect(() => {
 		const unsub = onSnapshot(doc(db, "contact", "home"), (doc) => {
 			setIsLive(doc.data().isLive);
-		});
-
-		return () => {
-			unsub;
-		};
-	}, [])
-
-	useEffect(() => {
-		const unsub = onSnapshot(doc(db, "contact", "home"), (doc) => {
 			setLink(doc.data().link);
+			setLiveStream(doc.data().stream_is_live);
+			setStreamLink(doc.data().stream_link);
 		});
 
 		return () => {
 			unsub;
 		};
 	}, [])
+
+	useEffect(()=>{
+		 liveStream &&  setDisablebtn(false)
+		 !liveStream &&  setDisablebtn(true)
+	},[liveStream])
+
+	
 
 	const handleRegisterbtn = () => {
 		if (isLive) {
@@ -48,6 +52,10 @@ function Navbar() {
 		else {
 			toast.error('registrations not opened yet!!');
 		}
+	}
+	// liveStream?setDisablebtn(false):setDisablebtn(true)
+	const handleLiveBtn = () => {
+			window.open(streamLink, "_blank")
 	}
 
 	return (
@@ -79,34 +87,6 @@ function Navbar() {
 					<Link activeClass={`${pathname.includes("contact") ? "active" : ""}`} to="contact" spy={true} smooth={true} offset={-80} duration={1} onClick={() => setNavOpen("cat")}>
 						CONTACT
 					</Link>
-					{/* <a
-						className={`${pathname.includes("about") ? "active" : ""}`}
-						href="#about"
-						onClick={() => setNavOpen("boy")}
-					>
-						ABOUT
-					</a> */}
-					{/* <a
-						className={`${pathname.includes("sports") ? "active" : ""}`}
-						href="#sports"
-						onClick={() => setNavOpen("doctor")}
-					>
-						SPORTS
-					</a> */}
-					{/* <a
-						className={`${pathname.includes("live") ? "active" : ""}`}
-						href="#live"
-						onClick={() => setNavOpen("kuchbhi")}
-					>
-						LIVE RESULTS
-					</a>
-					<a
-						className={`${pathname.includes("contact") ? "active" : ""}`}
-						href="#contact"
-						onClick={() => setNavOpen("cat")}
-					>
-						CONTACT
-					</a> */}
 				</div>
 				<div className="navRight">
 					<a
@@ -115,6 +95,13 @@ function Navbar() {
 					>
 						REGISTER
 					</a>
+					<button
+						className="liveButton"
+						disabled={disablebtn}
+						onClick={()=>handleLiveBtn()}
+					>
+						GO LIVE
+					</button>
 					<img
 						onClick={() => setNavOpen("navMenuOpenshow")}
 						src={navMenu}

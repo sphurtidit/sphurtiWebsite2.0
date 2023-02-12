@@ -116,7 +116,7 @@ function Home() {
 
 						{
 							playerImg.map((item, id) => {
-								return <img src={item} alt="" />
+								return <img src={item} alt="" key={id}/>
 							})
 						}
 					</Carousel>

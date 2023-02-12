@@ -84,11 +84,14 @@
 .home>.mainhome>.right {
 	position: relative;
 	margin-top: 2rem;
-	/* background-image: url("../../assets/playerBackgorund.png");
+	background-image: url("../../assets/playerBackgorund.png");
 	background-repeat: no-repeat;
-	background-size: 100%; */
+	background-size: 100%;
 }
 
+.home>.mainhome>.right>.carousel{
+	margin-top: -2rem;
+}
 
 .sphurtiText{
 	color: white;
