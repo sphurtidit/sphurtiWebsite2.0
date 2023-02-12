@@ -27,7 +27,7 @@ const LiveResult = () => {
 	}, []);
 	return (
 		<div className="LiveResultsPage" id="live">
-			<h1 className="liveresults">Live Results</h1>
+			<h1 className="liveresults">LIVE RESULTS</h1>
 			{data && data.length > 0 && (
 				<div className="mainbadminton">
 					<p className="heading">Badminton</p>
