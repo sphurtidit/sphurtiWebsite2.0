@@ -18,6 +18,9 @@
 .footer >.footerimages> img {
 	height: 6.5rem;
 }
+.bytebuilderlink{
+	text-decoration: none;
+}
 
 .footer > .developers{
 	color: white;

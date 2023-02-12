@@ -15,7 +15,7 @@ function Footer() {
       </div>
       <div className="developers">
         Made by Team{" "}
-        <a href="http://linktr.ee/ByteBuilders" target="_blank">
+        <a className="bytebuilderlink" href="http://linktr.ee/ByteBuilders" target="_blank">
           <span>ByteBuilders</span>{" "}
         </a>
       </div>
