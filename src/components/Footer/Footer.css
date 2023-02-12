@@ -29,7 +29,10 @@
 	font-family: 'Montserrat';
 	color: #F34D65;
 	font-weight: 600;
+	text-decoration: underline;
+	text-decoration-color: black;
 	cursor: pointer;
+	text-decoration: none;
 }
 
 @media only screen and (max-width: 500px) {

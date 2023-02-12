@@ -28,7 +28,7 @@ const LiveResult = () => {
 	return (
 		<div className="LiveResultsPage" id="live">
 			<h1 className="liveresults">Live Results</h1>
-			{data && data1.length > 0 && (
+			{data && data.length > 0 && (
 				<div className="mainbadminton">
 					<p className="heading">Badminton</p>
 					<div className="badmintondiv">
