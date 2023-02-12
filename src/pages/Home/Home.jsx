@@ -10,14 +10,17 @@ import MessageCard from "../../components/MessageCard/MessageCard";
 // import twitter from "../../assets/twitter-icon.png";
 // import youtube from "../../assets/youtube-icon.png";
 // import { Zoom } from "react-reveal";
-import player from "../../assets/homePlayer.png";
+// import player from "../../assets/homePlayer.png";
 import toast, { Toaster } from 'react-hot-toast';
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import { Carousel } from 'react-responsive-carousel';
 
 function Home() {
 	const [data, setData] = useState([]);
-	const [isLive,setIsLive]=useState("");
-	const [link,setLink]=useState("")
+	const [isLive, setIsLive] = useState("");
+	const [link, setLink] = useState("")
 	const [loading, setLoading] = useState(true);
+	const [playerImg, setPlayerImg] = useState([]);
 
 	useEffect(() => {
 		const unsub = onSnapshot(doc(db, "contact", "message"), (doc) => {
@@ -30,32 +33,41 @@ function Home() {
 		};
 	}, []);
 
-	useEffect(()=>{
+	useEffect(() => {
 		const unsub = onSnapshot(doc(db, "contact", "home"), (doc) => {
 			setIsLive(doc.data().isLive);
 		});
-	
+
 		return () => {
 			unsub;
 		};
-	},[])
+	}, [])
 
-	useEffect(()=>{
+	useEffect(() => {
 		const unsub = onSnapshot(doc(db, "contact", "home"), (doc) => {
 			setLink(doc.data().link);
 		});
-	
+
 		return () => {
 			unsub;
 		};
-	},[])
+	}, [])
 
-	const handleRegisterbtn=()=>{
-		if(isLive)
-		{
-			window.open(link,"_blank")
+	useEffect(() => {
+		const unsub = onSnapshot(doc(db, "contact", "home"), (doc) => {
+			setPlayerImg(doc.data().images);
+		});
+
+		return () => {
+			unsub;
+		};
+	}, [])
+
+	const handleRegisterbtn = () => {
+		if (isLive) {
+			window.open(link, "_blank")
 		}
-		else{
+		else {
 			toast.error('registrations not opened yet!!');
 		}
 	}
@@ -82,14 +94,32 @@ function Home() {
 							</div>
 						</div>
 						<button className="registerbtn"
-						onClick={()=>handleRegisterbtn()}
+							onClick={() => handleRegisterbtn()}
 						>
 							REGISTER
 						</button>
 					</div>
 				</div>
 				<div className="right">
-					<img src={player} alt="" />
+					{/* <img src={player} alt="" /> */}
+					<Carousel
+					className="carousel"
+						autoPlay={true}
+						infiniteLoop={true}
+						width={"20rem"}
+						interval={2000}
+						showArrows={false}
+						showIndicators={false}
+						showStatus={false}
+						showThumbs={false}
+					>
+
+						{
+							playerImg.map((item, id) => {
+								return <img src={item} alt="" />
+							})
+						}
+					</Carousel>
 				</div>
 			</div>
 			<div className="messages" id="about">
