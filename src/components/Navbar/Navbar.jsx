@@ -89,19 +89,19 @@ function Navbar() {
 					</Link>
 				</div>
 				<div className="navRight">
-					<a
-						className={`${pathname.includes("register") ? "active" : ""}`}
-						onClick={() => handleRegisterbtn()}
-					>
-						REGISTER
-					</a>
-					<button
+				<button
 						className="liveButton"
 						disabled={disablebtn}
 						onClick={()=>handleLiveBtn()}
 					>
 						GO LIVE
 					</button>
+					<a
+						className={`${pathname.includes("register") ? "active" : ""}`}
+						onClick={() => handleRegisterbtn()}
+					>
+						REGISTER
+					</a>
 					<img
 						onClick={() => setNavOpen("navMenuOpenshow")}
 						src={navMenu}

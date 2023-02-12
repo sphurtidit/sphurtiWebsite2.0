@@ -27,7 +27,7 @@ function Sports() {
 						margin: "0 auto 2rem auto",
 					}}
 				>
-					GAMES
+					SPORTS
 				</p>
 			</div>
 			<Eventswrapper />

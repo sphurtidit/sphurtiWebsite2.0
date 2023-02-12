@@ -109,7 +109,7 @@
 	width: 100vw;
 	height: 100vh;
 	background: rgba(0, 0, 0, 0.445);
-	backdrop-filter: blur(10px);
+	backdrop-filter: blur(20px);
 	transform: translateY(-100vh);
 	transition: 0.2s ease-in;
 	border-radius: 100%;
@@ -165,7 +165,7 @@
 }
 /*  */
 
-@media only screen and (max-width: 1040px) {
+@media only screen and (max-width: 1150px) {
 	.navRight {
 		/* display: flex; */
 		padding-right: 1rem;
