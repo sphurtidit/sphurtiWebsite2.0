@@ -106,14 +106,14 @@ function Home() {
 					className="carousel"
 						autoPlay={true}
 						infiniteLoop={true}
-						width={"20rem"}
+						width={"22rem"}
 						interval={2000}
 						showArrows={false}
 						showIndicators={false}
 						showStatus={false}
 						showThumbs={false}
+						key={playerImg.length}
 					>
-
 						{
 							playerImg.map((item, id) => {
 								return <img src={item} alt="" key={id}/>
