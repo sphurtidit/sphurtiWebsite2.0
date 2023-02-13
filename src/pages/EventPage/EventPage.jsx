@@ -1,6 +1,5 @@
 import { Router, useLocation } from "react-router-dom";
 import "./EventPage.css";
-import Circles from "../../components/Circles/Circles";
 
 
 
