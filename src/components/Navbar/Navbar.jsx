@@ -8,7 +8,6 @@ import toast, { Toaster } from 'react-hot-toast';
 import "./Navbar.css";
 import * as Scroll from 'react-scroll';
 import { Link } from 'react-scroll'
-import { async } from "@firebase/util";
 
 function Navbar() {
 	const [navOpen, setNavOpen] = useState("");
@@ -37,25 +36,23 @@ function Navbar() {
 		};
 	}, [])
 
-	useEffect(()=>{
-		 liveStream &&  setDisablebtn(false)
-		 !liveStream &&  setDisablebtn(true)
-	},[liveStream])
+	useEffect(() => {
+		liveStream && setDisablebtn(false)
+		!liveStream && setDisablebtn(true)
+	}, [liveStream])
 
-	
+
 
 	const handleRegisterbtn = () => {
 		if (isLive) {
-			// window.location.href=link;
 			window.open(link, "_blank")
 		}
 		else {
 			toast.error('registrations not opened yet!!');
 		}
 	}
-	// liveStream?setDisablebtn(false):setDisablebtn(true)
 	const handleLiveBtn = () => {
-			window.open(streamLink, "_blank")
+		window.open(streamLink, "_blank")
 	}
 
 	return (
@@ -65,13 +62,6 @@ function Navbar() {
 					<img src={sphurtiLogo} alt="" />
 				</div>
 				<div className="navCenter">
-					{/* <a
-						className={`${pathname.includes("home") ? "active" : ""}`}
-						href="#home"
-						onClick={() => setNavOpen("abeOoo")}
-					>
-						HOME
-					</a> */}
 					<Link activeClass={`${pathname.includes("home") ? "active" : ""}`} to="home" spy={true} smooth={true} offset={-150} duration={1} onClick={() => setNavOpen("abeOoo")}>
 						HOME
 					</Link>
@@ -89,10 +79,10 @@ function Navbar() {
 					</Link>
 				</div>
 				<div className="navRight">
-				<button
+					<button
 						className="liveButton"
 						disabled={disablebtn}
-						onClick={()=>handleLiveBtn()}
+						onClick={() => handleLiveBtn()}
 					>
 						GO LIVE
 					</button>
@@ -118,41 +108,6 @@ function Navbar() {
 					/>
 				</div>
 				<div className="mobileMenu">
-					{/* <a
-						className={`${pathname.includes("home") ? "active" : ""}`}
-						href="#home"
-						onClick={() => setNavOpen("")}
-					>
-						HOME
-					</a>
-					<a
-						className={`${pathname.includes("about") ? "active" : ""}`}
-						href="#about"
-						onClick={() => setNavOpen("")}
-					>
-						ABOUT
-					</a>
-					<a
-						className={`${pathname.includes("sports") ? "active" : ""}`}
-						href="#sports"
-						onClick={() => setNavOpen("")}
-					>
-						SPORTS
-					</a>
-					<a
-						className={`${pathname.includes("live") ? "active" : ""}`}
-						href="#live"
-						onClick={() => setNavOpen("")}
-					>
-						LIVE RESULT
-					</a>
-					<a
-						className={`${pathname.includes("contact") ? "active" : ""}`}
-						href="#contact"
-						onClick={() => setNavOpen("")}
-					>
-						CONTACT
-					</a> */}
 					<Link activeClass={`${pathname.includes("home") ? "active" : ""}`} to="home" spy={true} smooth={true} offset={-150} duration={1} onClick={() => setNavOpen("abeOoo")}>
 						HOME
 					</Link>

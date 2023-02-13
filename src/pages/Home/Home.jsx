@@ -1,16 +1,8 @@
 import "./Home.css";
 import React, { useEffect, useState } from "react";
-// import homecourt from '../../assets/basketball-court.png'
-// import player from '../../assets/basketball-player.png'
 import { doc, onSnapshot } from "firebase/firestore";
 import { db } from "../../Firebase";
 import MessageCard from "../../components/MessageCard/MessageCard";
-// import facebook from "../../assets/facebook-icon.png";
-// import insta from "../../assets/insta-icon.png";
-// import twitter from "../../assets/twitter-icon.png";
-// import youtube from "../../assets/youtube-icon.png";
-// import { Zoom } from "react-reveal";
-// import player from "../../assets/homePlayer.png";
 import toast, { Toaster } from 'react-hot-toast';
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
@@ -36,25 +28,7 @@ function Home() {
 	useEffect(() => {
 		const unsub = onSnapshot(doc(db, "contact", "home"), (doc) => {
 			setIsLive(doc.data().isLive);
-		});
-
-		return () => {
-			unsub;
-		};
-	}, [])
-
-	useEffect(() => {
-		const unsub = onSnapshot(doc(db, "contact", "home"), (doc) => {
 			setLink(doc.data().link);
-		});
-
-		return () => {
-			unsub;
-		};
-	}, [])
-
-	useEffect(() => {
-		const unsub = onSnapshot(doc(db, "contact", "home"), (doc) => {
 			setPlayerImg(doc.data().images);
 		});
 
@@ -103,7 +77,7 @@ function Home() {
 				<div className="right">
 					{/* <img src={player} alt="" /> */}
 					<Carousel
-					className="carousel"
+						className="carousel"
 						autoPlay={true}
 						infiniteLoop={true}
 						width={"22rem"}
@@ -116,7 +90,7 @@ function Home() {
 					>
 						{
 							playerImg.map((item, id) => {
-								return <img src={item} alt="" key={id}/>
+								return <img src={item} alt="" key={id} />
 							})
 						}
 					</Carousel>
