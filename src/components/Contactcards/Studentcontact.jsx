@@ -8,10 +8,14 @@ const Studentcontact = ({ data }) => {
         src={back}
         className="contactcard1"
         alt="not available"
-        style={{ backgroundImage: `url(${data.imageUrl})`  }}
+        style={{ backgroundImage: `url(${data.imageUrl})`,
+                  backgroundSize:"contain",
+                  backgroundPosition:"0 2rem"
+      }}
       ></img>
       <div className="div2">
         <p className="name">{data.name}</p>
+        <p className="designation">{data.designation}</p>
         <p className="number">{data.phone}</p>
       </div>
     </div>

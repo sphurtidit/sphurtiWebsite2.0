@@ -7,9 +7,11 @@
 	row-gap: 2rem;
 	width: 100%;
 	max-width: 974px;
+	
 }
 
 .cardcontainer {
+	cursor: pointer;
 	background: transparent;
 	overflow: hidden;
 	display: flex;

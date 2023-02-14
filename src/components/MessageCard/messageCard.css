@@ -16,8 +16,8 @@
 }
 
 .messageCard>.msgImg>img {
-    width: 10rem;
-    margin: 5rem;
+    width: 15rem;
+    margin: 2rem 3rem;
 }
 
 .messageCard>.messageDetail>.message {

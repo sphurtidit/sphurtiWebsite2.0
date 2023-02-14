@@ -82,7 +82,9 @@ const EventCards = ({ data }) => {
 						src={back}
 						className="contactcard1"
 						alt="not available"
-						style={{ backgroundImage: `url(${data.thumbnail})` }}
+						style={{
+							backgroundImage: `url(${data.thumbnail})`,
+						}}
 					></img>
 				</div>
 

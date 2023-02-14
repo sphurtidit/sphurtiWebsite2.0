@@ -62,10 +62,10 @@ function Home() {
 								Unleash Your Potential,
 								<br /> Embrace the Game
 							</div>
-							<div className="sub2">
+							{/* <div className="sub2">
 								Lorem ipsum dolor amet sit Lorem ipsum dolor amet <br /> sit
 								Lorem ipsum dolor amet sit Lorem ipsum dolor <br /> amet sit
-							</div>
+							</div> */}
 						</div>
 						<button className="registerbtn"
 							onClick={() => handleRegisterbtn()}
