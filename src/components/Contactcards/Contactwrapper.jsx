@@ -8,6 +8,7 @@ import Studentcontact from "./Studentcontact";
 const Contactwrapper = () => {
 	const [data, setData] = useState([]);
 	const [state, setState] = useState([]);
+	const [heads,setHeads]=useState([])
 	const [loading, setLoading] = useState(false);
 	useEffect(() => {
 		const unsub = onSnapshot(doc(db, "contact", "faculty_contact"), (doc) => {
@@ -22,6 +23,7 @@ const Contactwrapper = () => {
 	useEffect(() => {
 		const unsub2 = onSnapshot(doc(db, "contact", "student_contact"), (doc) => {
 			setState(doc.data().student_contact);
+			setHeads(doc.data().head_contact);
 			setLoading(false);
 		});
 
@@ -57,6 +59,10 @@ const Contactwrapper = () => {
 					Student contact
 				</h2>
 			)}
+			<div className="div6">
+				{heads &&
+					heads.map((item, id) => <Studentcontact data={item} key={id} />)}
+			</div>
 			<div className="div5">
 				{state &&
 					state.map((item, id) => <Studentcontact data={item} key={id} />)}

@@ -7,9 +7,11 @@
 	row-gap: 2rem;
 	width: 100%;
 	max-width: 974px;
+
 }
 
 .cardcontainer {
+	cursor: pointer;
 	background: transparent;
 	overflow: hidden;
 	display: flex;
@@ -33,7 +35,7 @@
 	background-position: center;
 }
 
-.cardcontainer > div {
+.cardcontainer>div {
 	display: flex;
 	width: 100%;
 	justify-content: center;
@@ -44,7 +46,7 @@
 	flex-direction: column;
 }
 
-.cardcontainer > a:nth-child(2) {
+.cardcontainer>a:nth-child(2) {
 	display: flex;
 	width: 100%;
 	justify-content: center;
@@ -55,12 +57,12 @@
 	text-decoration: none;
 }
 
-.cardcontainer a > div {
+.cardcontainer a>div {
 	text-decoration: none;
 	font-weight: 500;
 }
 
-.cardcontainer > div > a {
+.cardcontainer>div>a {
 	text-decoration: none;
 	color: white;
 	font-weight: 500;
@@ -73,6 +75,7 @@
 	font-size: 1.7rem;
 	font-family: "Anton", sans-serif;
 }
+
 .designation {
 	text-decoration: none;
 	color: white;
@@ -81,12 +84,14 @@
 	margin-bottom: 0.2rem;
 	margin-top: 0.2rem;
 }
+
 .number {
 	text-decoration: none;
 	color: #f34e66;
 	font-weight: 700;
 	font-size: 1.3rem;
 }
+
 .Ourteam {
 	color: white;
 	font-family: "Anton", sans-serif;
@@ -94,6 +99,7 @@
 	font-weight: 600;
 	margin-bottom: 2rem;
 }
+
 .div4 {
 	display: flex;
 	flex-wrap: wrap-reverse;
@@ -107,8 +113,10 @@
 
 .div5 {
 	margin-top: 2rem;
-	display: flex;
-	flex-wrap: wrap-reverse;
+	/* display: flex; */
+	/* flex-wrap:wrap; */
+	display: grid;
+	grid-template-columns: auto auto auto;
 	justify-content: center;
 	align-items: center;
 	column-gap: 3rem;
@@ -116,6 +124,19 @@
 	width: 100%;
 	max-width: 1085px;
 }
+
+.div6 {
+	margin-top: 2rem;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	column-gap: 3rem;
+	row-gap: 2rem;
+	width: 100%;
+	max-width: 1085px;
+}
+
 .mantine-Modal-modal {
 	background-color: black;
 	border: 1px solid white;
@@ -242,4 +263,11 @@
 	top: 1rem;
 	right: 1rem;
 	z-index: 10;
+}
+
+@media only screen and (max-width:885px) {
+	.div5 {
+		display: flex;
+		flex-wrap: wrap;
+	}
 }
