@@ -42,6 +42,9 @@ const EventCards = ({ data }) => {
 									return <li key={id}> {rule} </li>;
 								})}
 						</ul>
+						{data.image && (
+							<img src={data.image} alt="rules" style={{ width: "100%" }} />
+						)}
 					</div>
 					<div className="modalShedule">
 						<p>Schedule:</p>
