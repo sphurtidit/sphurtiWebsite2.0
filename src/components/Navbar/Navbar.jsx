@@ -66,7 +66,7 @@ function Navbar() {
 						HOME
 					</Link>
 					<Link activeClass={`${pathname.includes("about") ? "active" : ""}`} to="about" spy={true} smooth={true} offset={-80} duration={1} onClick={() => setNavOpen("boy")}>
-						ABOUT
+						MESSAGES
 					</Link>
 					<Link activeClass={`${pathname.includes("sports") ? "active" : ""}`} to="sports" spy={true} smooth={true} offset={-80} duration={1} onClick={() => setNavOpen("doctor")}>
 						SPORTS
@@ -112,7 +112,7 @@ function Navbar() {
 						HOME
 					</Link>
 					<Link activeClass={`${pathname.includes("about") ? "active" : ""}`} to="about" spy={true} smooth={true} offset={-60} duration={1} onClick={() => setNavOpen("boy")}>
-						ABOUT
+						MESSAGES
 					</Link>
 					<Link activeClass={`${pathname.includes("sports") ? "active" : ""}`} to="sports" spy={true} smooth={true} offset={-60} duration={1} onClick={() => setNavOpen("doctor")}>
 						SPORTS

@@ -97,7 +97,7 @@ function Home() {
 				</div>
 			</div>
 			<div className="messages" id="about">
-				<div className="msgHeading">ABOUT</div>
+				<div className="msgHeading">MESSAGES</div>
 				{loading && <h1>Loading...</h1>}
 				{data &&
 					data.map((item, id) => {
