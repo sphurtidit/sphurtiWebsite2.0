@@ -14,9 +14,9 @@ function Footer() {
         <img src={imgright} alt="" />
       </div>
       <div className="developers">
-        Made by Team{" "}
+        Made by {" "}
         <a className="bytebuilderlink" href="http://linktr.ee/ByteBuilders" target="_blank">
-          <span>ByteBuilders</span>{" "}
+          <span>Sphurti Technical Team</span>{" "}
         </a>
       </div>
     </div>
