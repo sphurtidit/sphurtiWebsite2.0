@@ -188,6 +188,16 @@
 	font-weight: 600;
 }
 
+.modalDetails div p:nth-child(2) {
+	font-size: 1.0rem;
+	font-weight: 400;
+}
+
+.modalDetails div p:nth-child(3) {
+	font-size: 0.9rem;
+	font-weight: 400;
+}
+
 .rules {
 	display: flex;
 	flex-direction: column;
@@ -201,6 +211,7 @@
 }
 
 .modalRules {
+	font-size: 0.9rem;
 	padding-left: 1rem;
 }
 
