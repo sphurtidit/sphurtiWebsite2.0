@@ -26,12 +26,21 @@ const EventCards = ({ data }) => {
 				<div className="modalbody">
 					<div className="modalDetails">
 						<div>
+							<p>Registration Fees :</p>
+							<p>{data.registration_fees}</p>
+						</div>
+						<div>
 							<p>Prize Money :</p>
+						</div>
+						<div>
+							<p></p>
+							<p>Winners: </p>
 							<p>{data.prize_money}</p>
 						</div>
 						<div>
-							<p>Registration Fees :</p>
-							<p>{data.registration_fees}</p>
+							<p></p>
+							<p>Runner Up: </p>
+							<p>{data.prize_runner}</p>
 						</div>
 					</div>
 					<div className="rules">
