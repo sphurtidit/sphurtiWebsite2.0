@@ -1,5 +1,6 @@
 import "./Sports.css";
 import Eventswrapper from "../../components/EventCards/Eventwrapper";
+import { Zoom } from "react-awesome-reveal";
 function Sports() {
 	return (
 		<div
@@ -15,7 +16,7 @@ function Sports() {
 			}}
 			id="sports"
 		>
-			<div>
+			<Zoom triggerOnce={true}>
 				<p
 					style={{
 						color: "white",
@@ -29,7 +30,7 @@ function Sports() {
 				>
 					SPORTS
 				</p>
-			</div>
+			</Zoom>
 			<Eventswrapper />
 		</div>
 	);
