@@ -66,7 +66,7 @@
 	font-size: 1.2rem;
 }
 
-.home>.mainhome>.left>.content>.registerbtn {
+.home>.mainhome>.left>.content>.btnn>.registerbtn {
 	margin-top: 2rem;
 	background: linear-gradient(89.88deg, #F34C65 0.08%, #EA846A 99.9%);
 	display: flex;

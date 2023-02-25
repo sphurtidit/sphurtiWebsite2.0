@@ -3,6 +3,7 @@ import { Modal } from "@mantine/core";
 import { useState } from "react";
 import close from "../../assets/closeButton.png";
 import back from "../../assets/back3.webp";
+import { Bounce,Slide } from "react-awesome-reveal";
 
 const EventCards = ({ data }) => {
 	const [modal, setModal] = useState(false);
@@ -88,22 +89,24 @@ const EventCards = ({ data }) => {
 					)}
 				</div>
 			</Modal>
-			<div className="cardcontainer" onClick={() => setModal(true)}>
-				<div>
-					<img
-						src={back}
-						className="contactcard1"
-						alt="not available"
-						style={{
-							backgroundImage: `url(${data.thumbnail})`,
-						}}
-					></img>
-				</div>
+			<Slide triggerOnce={true} cascade damping={0.3}>
+				<div className="cardcontainer" onClick={() => setModal(true)}>
+					<div>
+						<img
+							src={back}
+							className="contactcard1"
+							alt="not available"
+							style={{
+								backgroundImage: `url(${data.thumbnail})`,
+							}}
+						></img>
+					</div>
 
-				<div>
-					<p className="name">{data.name}</p>
+					<div>
+						<p className="name">{data.name}</p>
+					</div>
 				</div>
-			</div>
+			</Slide>
 		</>
 	);
 };
