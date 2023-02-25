@@ -80,7 +80,15 @@
 	font-weight: 600;
 	cursor: pointer;
 }
-
+.timer{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 2rem;
+}
+.timerheading{
+	color: white;
+}
 .home>.mainhome>.right {
 	position: relative;
 	margin-top: 2rem;
