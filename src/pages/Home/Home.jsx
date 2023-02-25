@@ -54,10 +54,13 @@ function Home() {
 			<div className="mainhome" id="home">
 				<div className="left">
 					<div className="content">
+						<Zoom triggerOnce={true} delay={1000} className="headding">
 						<div className="mainHeading">
-							<Zoom triggerOnce={true} className="sphurtiText">SPHURTI </Zoom>
-							<Zoom triggerOnce={true} className="year">2023</Zoom>
+							<span className="sphurtiText">SPHURTI </span>
+							<span className="year">2023</span>
 						</div>
+						</Zoom>
+						
 						<Zoom triggerOnce={true} delay={1000} className="subcontent">
 							<div className="sub1">
 								Unleash Your Potential,
