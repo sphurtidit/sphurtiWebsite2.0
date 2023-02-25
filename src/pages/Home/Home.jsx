@@ -6,6 +6,8 @@ import MessageCard from "../../components/MessageCard/MessageCard";
 import toast, { Toaster } from 'react-hot-toast';
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
+import Timer from "../../components/Timer/Timer";
+
 
 function Home() {
 	const [data, setData] = useState([]);
@@ -47,65 +49,66 @@ function Home() {
 	}
 
 	return (
-		<div className="home">
-			<Toaster />
-			<div className="theGame">THE GAME</div>
-			<div className="mainhome" id="home">
-				<div className="left">
-					<div className="content">
-						<div className="mainHeading">
-							<span className="sphurtiText">SPHURTI </span>
-							<span className="year">2023</span>
-						</div>
-						<div className="subcontent">
-							<div className="sub1">
-								Unleash Your Potential,
-								<br /> Embrace the Game
-							</div>
-							{/* <div className="sub2">
+    <div className="home">
+      <Toaster />
+      <div className="theGame">THE GAME</div>
+      <div className="mainhome" id="home">
+        <div className="left">
+          <div className="content">
+            <div className="mainHeading">
+              <span className="sphurtiText">SPHURTI </span>
+              <span className="year">2023</span>
+            </div>
+            <div className="subcontent">
+              <div className="sub1">
+                Unleash Your Potential,
+                <br /> Embrace the Game
+              </div>
+              {/* <div className="sub2">
 								Lorem ipsum dolor amet sit Lorem ipsum dolor amet <br /> sit
 								Lorem ipsum dolor amet sit Lorem ipsum dolor <br /> amet sit
 							</div> */}
-						</div>
-						<button className="registerbtn"
-							onClick={() => handleRegisterbtn()}
-						>
-							REGISTER
-						</button>
-					</div>
-				</div>
-				<div className="right">
-					{/* <img src={player} alt="" /> */}
-					<Carousel
-						className="carousel"
-						autoPlay={true}
-						infiniteLoop={true}
-						width={"22rem"}
-						interval={2000}
-						showArrows={false}
-						showIndicators={false}
-						showStatus={false}
-						showThumbs={false}
-						key={playerImg.length}
-					>
-						{
-							playerImg.map((item, id) => {
-								return <img src={item} alt="" key={id} />
-							})
-						}
-					</Carousel>
-				</div>
-			</div>
-			<div className="messages" id="about">
-				<div className="msgHeading">MESSAGES</div>
-				{loading && <h1>Loading...</h1>}
-				{data &&
-					data.map((item, id) => {
-						return <MessageCard data={item} key={id} />;
-					})}
-			</div>
-		</div>
-	);
+            </div>
+            <button className="registerbtn" onClick={() => handleRegisterbtn()}>
+              REGISTER
+            </button>
+          </div>
+        </div>
+        <div className="right">
+          {/* <img src={player} alt="" /> */}
+          <Carousel
+            className="carousel"
+            autoPlay={true}
+            infiniteLoop={true}
+            width={"22rem"}
+            interval={2000}
+            showArrows={false}
+            showIndicators={false}
+            showStatus={false}
+            showThumbs={false}
+            key={playerImg.length}
+          >
+            {playerImg.map((item, id) => {
+              return <img src={item} alt="" key={id} />;
+            })}
+          </Carousel>
+        </div>
+      </div>
+      <div className="timer">
+        <h1 className="timerheading">Sphurti will kick off in :</h1>
+        <Timer />
+      </div>
+
+      <div className="messages" id="about">
+        <div className="msgHeading">MESSAGES</div>
+        {loading && <h1>Loading...</h1>}
+        {data &&
+          data.map((item, id) => {
+            return <MessageCard data={item} key={id} />;
+          })}
+      </div>
+    </div>
+  );
 }
 
 export default Home;
