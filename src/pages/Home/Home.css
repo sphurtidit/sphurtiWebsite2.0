@@ -122,7 +122,7 @@
 		width: 27rem;
 	}
 
-	.home>.mainhome>.left>.content>.mainHeading {
+	.home>.mainhome>.left>.content>.headding>.mainHeading {
 		font-size: 6rem;
 	}
 
@@ -149,7 +149,7 @@
 			width: 23rem;
 		}
 
-		.home>.mainhome>.left>.content>.mainHeading {
+		.home>.mainhome>.left>.content>.headding>.mainHeading {
 			font-size: 5rem;
 		}
 
@@ -181,7 +181,7 @@
 			align-items: center;
 			justify-content: center;
 		}
-		.home>.mainhome>.left>.content>.mainHeading {
+		.home>.mainhome>.left>.content>.headding>.mainHeading {
 			font-size: 4rem;
 		}
 
@@ -202,7 +202,7 @@
 		.home{
 			padding: 0 2rem;
 		}
-		.home>.mainhome>.left>.content>.mainHeading {
+		.home>.mainhome>.left>.content>.headding>.mainHeading {
 			font-size: 3rem;
 			/* text-align: start; */
 		}
