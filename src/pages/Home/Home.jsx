@@ -8,6 +8,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a lo
 import { Carousel } from 'react-responsive-carousel';
 import Timer from "../../components/Timer/Timer";
 
+import { Zoom } from "react-awesome-reveal";
 
 function Home() {
 	const [data, setData] = useState([]);
@@ -51,15 +52,20 @@ function Home() {
 	return (
     <div className="home">
       <Toaster />
-      <div className="theGame">THE GAME</div>
+      <Zoom triggerOnce={true} delay={500} className="theGame">
+        THE GAME
+      </Zoom>
       <div className="mainhome" id="home">
         <div className="left">
           <div className="content">
-            <div className="mainHeading">
-              <span className="sphurtiText">SPHURTI </span>
-              <span className="year">2023</span>
-            </div>
-            <div className="subcontent">
+            <Zoom triggerOnce={true} delay={1000} className="headding">
+              <div className="mainHeading">
+                <span className="sphurtiText">SPHURTI </span>
+                <span className="year">2023</span>
+              </div>
+            </Zoom>
+
+            <Zoom triggerOnce={true} delay={1000} className="subcontent">
               <div className="sub1">
                 Unleash Your Potential,
                 <br /> Embrace the Game
@@ -68,13 +74,18 @@ function Home() {
 								Lorem ipsum dolor amet sit Lorem ipsum dolor amet <br /> sit
 								Lorem ipsum dolor amet sit Lorem ipsum dolor <br /> amet sit
 							</div> */}
-            </div>
-            <button className="registerbtn" onClick={() => handleRegisterbtn()}>
-              REGISTER
-            </button>
+            </Zoom>
+            <Zoom triggerOnce={true} delay={1500} className="btnn">
+              <button
+                className="registerbtn"
+                onClick={() => handleRegisterbtn()}
+              >
+                REGISTER
+              </button>
+            </Zoom>
           </div>
         </div>
-        <div className="right">
+        <Zoom triggerOnce={true} className="right">
           {/* <img src={player} alt="" /> */}
           <Carousel
             className="carousel"
@@ -92,15 +103,16 @@ function Home() {
               return <img src={item} alt="" key={id} />;
             })}
           </Carousel>
-        </div>
+        </Zoom>
       </div>
       <div className="timer">
         <h1 className="timerheading">Sphurti will kick off in :</h1>
         <Timer />
       </div>
-
       <div className="messages" id="about">
-        <div className="msgHeading">MESSAGES</div>
+        <Zoom triggerOnce={true} className="msgHeading">
+          MESSAGES
+        </Zoom>
         {loading && <h1>Loading...</h1>}
         {data &&
           data.map((item, id) => {

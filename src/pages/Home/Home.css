@@ -35,7 +35,7 @@
 	margin-top: 2rem;
 }
 
-.home>.mainhome>.left>.content>.mainHeading {
+.home>.mainhome>.left>.content>.headding>.mainHeading {
 	font-family: 'Anton';
 	font-style: normal;
 	font-weight: 400;
@@ -66,7 +66,7 @@
 	font-size: 1.2rem;
 }
 
-.home>.mainhome>.left>.content>.registerbtn {
+.home>.mainhome>.left>.content>.btnn>.registerbtn {
 	margin-top: 2rem;
 	background: linear-gradient(89.88deg, #F34C65 0.08%, #EA846A 99.9%);
 	display: flex;
@@ -130,7 +130,7 @@
 		width: 27rem;
 	}
 
-	.home>.mainhome>.left>.content>.mainHeading {
+	.home>.mainhome>.left>.content>.headding>.mainHeading {
 		font-size: 6rem;
 	}
 
@@ -157,7 +157,7 @@
 			width: 23rem;
 		}
 
-		.home>.mainhome>.left>.content>.mainHeading {
+		.home>.mainhome>.left>.content>.headding>.mainHeading {
 			font-size: 5rem;
 		}
 
@@ -189,7 +189,7 @@
 			align-items: center;
 			justify-content: center;
 		}
-		.home>.mainhome>.left>.content>.mainHeading {
+		.home>.mainhome>.left>.content>.headding>.mainHeading {
 			font-size: 4rem;
 		}
 
@@ -210,7 +210,7 @@
 		.home{
 			padding: 0 2rem;
 		}
-		.home>.mainhome>.left>.content>.mainHeading {
+		.home>.mainhome>.left>.content>.headding>.mainHeading {
 			font-size: 3rem;
 			/* text-align: start; */
 		}

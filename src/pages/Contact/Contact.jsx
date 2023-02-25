@@ -1,6 +1,7 @@
 import Contactwrapper from "../../components/Contactcards/Contactwrapper";
 import "./Contact.css";
 import { Link } from "react-router-dom";
+import { Zoom } from "react-awesome-reveal";
 
 function Contact() {
 	return (
@@ -17,9 +18,9 @@ function Contact() {
       }}
       id="contact"
     >
-      <div>
+      <Zoom triggerOnce={true}>
         <p className="Ourteam">CONTACT</p>
-      </div>
+      </Zoom>
 
       <Contactwrapper />
     </div>

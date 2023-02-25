@@ -2,6 +2,7 @@ import "./LiveResult.css";
 import { doc, onSnapshot } from "firebase/firestore";
 import { useEffect, useState } from "react";
 import { db } from "../../Firebase";
+import { Bounce, Slide, Zoom } from "react-awesome-reveal";
 const LiveResult = () => {
 	const [data, setData] = useState([]);
 	const [data1, setData1] = useState([]);
@@ -27,71 +28,97 @@ const LiveResult = () => {
 	}, []);
 	return (
 		<div className="LiveResultsPage" id="live">
-			<h1 className="liveresults">LIVE RESULTS</h1>
+			<Zoom triggerOnce={true}>
+				<h1 className="liveresults">LIVE RESULTS</h1>
+			</Zoom>
 			{data && data.length > 0 && (
 				<div className="mainbadminton">
-					<p className="heading">Badminton</p>
-					<div className="badmintondiv">
-						{data &&
-							data.map((item, id) => {
-								return <img src={item} key={id} className="images"></img>;
-							})}
-					</div>
+					<Zoom triggerOnce={true} delay={1000}>
+						<p className="heading">Badminton</p>
+					</Zoom>
+					<Slide triggerOnce={true} delay={1500} direction="right">
+						<div className="badmintondiv">
+							{data &&
+								data.map((item, id) => {
+									return <img src={item} key={id} className="images"></img>;
+								})}
+						</div>
+					</Slide>
 				</div>
 			)}
 			{data1 && data1.length > 0 && (
 				<div className="mainbasketball">
-					<p className="heading">Basketball</p>
-					<div className="basketballdiv">
-						{data1 &&
-							data1.map((item, id) => {
-								return <img src={item} key={id} className="images"></img>;
-							})}
-					</div>
+					<Zoom triggerOnce={true}>
+						<p className="heading">Basketball</p>
+					</Zoom>
+					<Slide triggerOnce={true} delay={500} direction="right">
+						<div className="basketballdiv">
+							{data1 &&
+								data1.map((item, id) => {
+									return <img src={item} key={id} className="images"></img>;
+								})}
+						</div>
+					</Slide>
 				</div>
 			)}
 			{data2 && data2.length > 0 && (
 				<div className="mainfootball">
-					<p className="heading">Football</p>
-					<div className="footballdiv">
-						{data2 &&
-							data2.map((item, id) => {
-								return <img src={item} key={id} className="images"></img>;
-							})}
-					</div>
+					<Zoom triggerOnce={true}>
+						<p className="heading">Football</p>
+					</Zoom>
+					<Slide triggerOnce={true} delay={500} direction="right">
+						<div className="footballdiv">
+							{data2 &&
+								data2.map((item, id) => {
+									return <img src={item} key={id} className="images"></img>;
+								})}
+						</div>
+					</Slide>
 				</div>
 			)}
 			{data3 && data3.length > 0 && (
 				<div className="maincricket">
-					<p className="heading">Cricket</p>
-					<div className="cricketdiv">
-						{data3 &&
-							data3.map((item, id) => {
-								return <img src={item} key={id} className="images"></img>;
-							})}
-					</div>
+					<Zoom triggerOnce={true}>
+						<p className="heading">Cricket</p>
+					</Zoom>
+					<Slide triggerOnce={true} delay={500} direction="right">
+						<div className="cricketdiv">
+							{data3 &&
+								data3.map((item, id) => {
+									return <img src={item} key={id} className="images"></img>;
+								})}
+						</div>
+					</Slide>
 				</div>
 			)}
 			{data4 && data4.length > 0 && (
 				<div className="maintabletennis">
-					<p className="heading">Table Tennis</p>
-					<div className="tabletennisdiv">
-						{data4 &&
-							data4.map((item, id) => {
-								return <img src={item} key={id} className="images"></img>;
-							})}
-					</div>
+					<Zoom triggerOnce={true}>
+						<p className="heading">Table Tennis</p>
+					</Zoom>
+					<Slide triggerOnce={true} delay={500} direction="right">
+						<div className="tabletennisdiv">
+							{data4 &&
+								data4.map((item, id) => {
+									return <img src={item} key={id} className="images"></img>;
+								})}
+						</div>
+					</Slide>
 				</div>
 			)}
 			{data5 && data5.length > 0 && (
 				<div className="mainvollyball">
-					<p className="heading">Vollyball</p>
-					<div className="vollyballdiv">
-						{data5 &&
-							data5.map((item, id) => {
-								return <img src={item} key={id} className="images"></img>;
-							})}
-					</div>
+					<Zoom triggerOnce={true}>
+						<p className="heading">Vollyball</p>
+					</Zoom>
+					<Slide triggerOnce={true} delay={500} direction="right">
+						<div className="vollyballdiv">
+							{data5 &&
+								data5.map((item, id) => {
+									return <img src={item} key={id} className="images"></img>;
+								})}
+						</div>
+					</Slide>
 				</div>
 			)}
 			{data.length === 0 &&
@@ -100,7 +127,7 @@ const LiveResult = () => {
 				data3.length === 0 &&
 				data4.length === 0 &&
 				data5.length === 0 && (
-					<p
+					<Bounce triggerOnce={true}
 						style={{
 							color: "grey",
 							textAlign: "center",
@@ -109,7 +136,7 @@ const LiveResult = () => {
 						}}
 					>
 						Awaiting results...
-					</p>
+					</Bounce>
 				)}
 		</div>
 	);
