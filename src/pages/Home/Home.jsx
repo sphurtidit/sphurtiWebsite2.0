@@ -107,10 +107,10 @@ function Home() {
 			</div>
 
 			<div className="timer">
-				<Zoom>
+				<Zoom triggerOnce={true}>
 					<h1 className="timerheading">Sphurti will kick off in :</h1>
 				</Zoom>
-				<Zoom>
+				<Zoom triggerOnce={true}>
 					<Timer />
 				</Zoom>
 			</div>
