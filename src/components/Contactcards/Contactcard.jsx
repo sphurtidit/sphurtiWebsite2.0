@@ -6,7 +6,7 @@ import { Slide } from "react-awesome-reveal";
 const Contactcard = ({ data }) => {
 
   return (
-    <Slide triggerOnce={true} delay={1000}>
+    <Slide triggerOnce={true}>
       <div className="cardcontainer">
         <div>
           <img
