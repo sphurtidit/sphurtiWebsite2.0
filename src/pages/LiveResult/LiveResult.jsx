@@ -29,7 +29,7 @@ const LiveResult = () => {
 	return (
 		<div className="LiveResultsPage" id="live">
 			<Zoom triggerOnce={true}>
-				<h1 className="liveresults">LIVE RESULTS</h1>
+				<h1 className="liveresults">RESULTS</h1>
 			</Zoom>
 			{data && data.length > 0 && (
 				<div className="mainbadminton">

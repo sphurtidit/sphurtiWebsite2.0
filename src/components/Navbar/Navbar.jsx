@@ -72,7 +72,7 @@ function Navbar() {
 						SPORTS
 					</Link>
 					<Link activeClass={`${pathname.includes("live") ? "active" : ""}`} to="live" spy={true} smooth={true} offset={-80} duration={1} onClick={() => setNavOpen("kuchBhi")}>
-						LIVE RESULTS
+						RESULTS
 					</Link>
 					<Link activeClass={`${pathname.includes("contact") ? "active" : ""}`} to="contact" spy={true} smooth={true} offset={-80} duration={1} onClick={() => setNavOpen("cat")}>
 						CONTACT
@@ -118,7 +118,7 @@ function Navbar() {
 						SPORTS
 					</Link>
 					<Link activeClass={`${pathname.includes("live") ? "active" : ""}`} to="live" spy={true} smooth={true} offset={-60} duration={1} onClick={() => setNavOpen("kuchBhi")}>
-						LIVE RESULTS
+						RESULTS
 					</Link>
 					<Link activeClass={`${pathname.includes("contact") ? "active" : ""}`} to="contact" spy={true} smooth={true} offset={-60} duration={1} onClick={() => setNavOpen("cat")}>
 						CONTACT
