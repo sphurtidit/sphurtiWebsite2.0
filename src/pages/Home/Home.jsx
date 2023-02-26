@@ -98,6 +98,7 @@ function Home() {
 						showStatus={false}
 						showThumbs={false}
 						key={playerImg.length}
+						swipeable={false}
 					>
 						{playerImg.map((item, id) => {
 							return <img src={item} alt="" key={id} />;
