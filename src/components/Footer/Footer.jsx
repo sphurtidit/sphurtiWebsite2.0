@@ -9,7 +9,7 @@ function Footer() {
 	return (
     <div className="footer">
       <div className="footerimages">
-        <img src={imgleft} alt="" />
+        <img className="leftImgfooter" src={imgleft} alt="" />
         <img src={imgcenter} alt="" />
         <img src={imgright} alt="" />
       </div>

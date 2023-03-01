@@ -106,7 +106,9 @@ function Home() {
 					</Carousel>
 				</Zoom>
 			</div>
-
+			<div className="dateSphurti">
+						<span className="dateofSphurti">13TH - 15TH MARCH &nbsp;</span><span>2023</span>
+			</div>
 			<div className="timer">
 				<Zoom triggerOnce={true}>
 					<h1 className="timerheading">Sphurti will kick off in :</h1>
