@@ -80,7 +80,9 @@
 	font-weight: 600;
 	cursor: pointer;
 	animation: zoom-in-zoom-out 1s ease infinite;
+	display: none;
 }
+
 
 .navRight>.liveButton:disabled{
 	background-color: grey;

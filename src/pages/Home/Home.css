@@ -90,6 +90,20 @@
 .timerheading{
 	color: white;
 }
+.dateSphurti{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-family: 'Anton';
+	font-size: 3rem;
+	margin-bottom: 5rem;
+	font-weight: 400;
+}
+
+.dateofSphurti{
+	color: white;
+}
+
 .home>.mainhome>.right {
 	position: relative;
 	margin-top: 2rem;
@@ -208,6 +222,10 @@
 		.timer{
 			margin-top: 5rem;
 		}
+		.dateSphurti{
+			margin-top: 6rem;
+		}
+		
 	}
 	@media only screen and (max-width:620px){
 		.home{
@@ -232,6 +250,14 @@
 			flex-direction: column;
 			justify-content: center;
 			align-items: start;
+		}
+		.dateSphurti{
+			font-size: 2.5rem;
+		}
+	}
+	@media only screen and (max-width:450px){
+		.dateSphurti{
+			font-size: 2rem;
 		}
 	}
 
