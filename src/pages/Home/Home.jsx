@@ -16,6 +16,19 @@ function Home() {
 	const [link, setLink] = useState("")
 	const [loading, setLoading] = useState(true);
 	const [playerImg, setPlayerImg] = useState([]);
+	const [isSphurtiDate, setIsSphurtiDate] = useState(false);
+	const [counter, setCounter] = useState(0);
+
+	useEffect(() => {
+		setTimeout(() => {
+			setCounter((prev) => prev + 1)
+			let currentDate = new Date();
+			if (currentDate.getDate() >= 3) {
+				setIsSphurtiDate(true);
+			}
+		}, 1000);
+	}, [counter])
+
 
 	useEffect(() => {
 		const unsub = onSnapshot(doc(db, "contact", "message"), (doc) => {
@@ -107,12 +120,12 @@ function Home() {
 				</Zoom>
 			</div>
 			<div className="dateSphurti">
-						<span className="dateofSphurti">13TH - 15TH MARCH &nbsp;</span><span>2023</span>
+				<span className="dateofSphurti">13TH - 15TH MARCH &nbsp;</span><span>2023</span>
 			</div>
 			<div className="timer">
-				<Zoom triggerOnce={true}>
+				{!isSphurtiDate && <Zoom triggerOnce={true}>
 					<h1 className="timerheading">Sphurti will kick off in :</h1>
-				</Zoom>
+				</Zoom>}
 				<Zoom triggerOnce={true}>
 					<Timer />
 				</Zoom>
