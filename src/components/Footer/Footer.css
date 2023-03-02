@@ -15,7 +15,7 @@
 	flex-wrap: wrap;
 }
 .footer > .footerimages > .leftImgfooter{
-	height:5rem ;
+	height:4.3rem ;
 }
 
 .footer >.footerimages> img {
@@ -28,7 +28,7 @@
 .footer > .developers{
 	color: white;
 	text-align: center;
-	padding: 1rem 0;
+	padding: 0rem 0;
 }
 
 .footer > .developers>span{
@@ -41,13 +41,27 @@
 	text-decoration: none;
 }
 
+.socials{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: row !important;
+	margin: 0 !important;
+}
+
+.socials>svg{
+	margin: 0.8rem;
+	cursor: pointer;
+}
+
+
 @media only screen and (max-width: 500px) {
 	.footer {
 		padding: 0.5rem;
 	}
 
 	.footer > .footerimages > .leftImgfooter{
-		height:3.5rem ;
+		height:3rem ;
 	}
 
 	.footer >.footerimages> img {
