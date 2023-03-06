@@ -7,6 +7,7 @@ import toast, { Toaster } from 'react-hot-toast';
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
 import Timer from "../../components/Timer/Timer";
+import ConfettiExplosion from 'react-confetti-explosion';
 
 import { Zoom } from "react-awesome-reveal";
 
@@ -23,7 +24,8 @@ function Home() {
 		setTimeout(() => {
 			setCounter((prev) => prev + 1)
 			let currentDate = new Date();
-			if (currentDate.getDate() >= 3) {
+			// console.log(currentDate.getHours())
+			if ((currentDate.getDate() >= 13) && (currentDate.getHours() == 0) && (currentDate.getMinutes() == 0) && (currentDate.getSeconds() == 0)) {
 				setIsSphurtiDate(true);
 			}
 		}, 1000);
@@ -124,8 +126,9 @@ function Home() {
 			</div>
 			<div className="timer">
 				{!isSphurtiDate && <Zoom triggerOnce={true}>
-					<h1 className="timerheading">Sphurti will kick off in :</h1>
+					<h1 className="timerheading" style={{ fontSize:"3rem"}}>Sphurti will kick off in :</h1>
 				</Zoom>}
+				{isSphurtiDate&&<ConfettiExplosion/>}
 				<Zoom triggerOnce={true}>
 					<Timer />
 				</Zoom>

@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
 import FlipCountdown from '@rumess/react-flip-countdown';
+import { Zoom } from "react-awesome-reveal";
 
 const Timer = () => {
     const[show,setShow]=useState(false);
         return (
           <>
-            {show && <div>
-              <p className='aftertext' style={{color:"white", fontSize:"2rem"}}>Woohoooo Sphurti is live now check out the live results !!!</p>
-            </div>}
+            {show && <Zoom>
+              <p className='aftertext' style={{color:"white", fontSize:"2.5rem",fontWeight:"600",marginTop:"2rem"}}><span style={{color:"#f74f63"}}> Woohoooo !!</span>  Sphurti is live now !!!</p>
+            </Zoom>}
             <FlipCountdown
               theme="dark"
               size="medium"
